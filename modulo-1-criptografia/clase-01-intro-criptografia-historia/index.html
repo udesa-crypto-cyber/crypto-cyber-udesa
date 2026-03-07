@@ -1528,13 +1528,14 @@
 </code></pre></div>
 Siendo... 0=A, 1=B, 2=C, ... 24=Y, 25=Z → Total = 26 elementos.</p>
 <p>Ejemplo, con <code>k = 3</code>: </p>
-<p>A → D - Para A=0 → (0 + 3) mod 26 = 3 → D
-B → E - Para B=1 → (1 + 3) mod 26 = 4 → E
-C → F - Para C=2 → (2 + 3) mod 26 = 5 → F</p>
-<p>...</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>A → D - Para A=0 → (0 + 3) mod 26 = 3 → D
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>B → E - Para B=1 → (1 + 3) mod 26 = 4 → E
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>C → F - Para C=2 → (2 + 3) mod 26 = 5 → F
+</code></pre></div>
+...</p>
 <p>Entonces, si ciframos:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Texto:   A T A C A R
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Clave:   D W D F D U
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Texto:   A T A C A R
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Clave:   D W D F D U
 </code></pre></div></p>
 <p>Simple, pero rompible: sólo hay 25 claves posibles. Un atacante puede probarlas todas en minutos.</p>
 <p>El <strong>mod 26</strong> es lo que hace que el alfabeto sea <strong>circular</strong>: cuando se llega a la <strong>Z</strong> se vuelve a empezar por la <strong>A</strong>.</p>
@@ -1543,8 +1544,8 @@ C → F - Para C=2 → (2 + 3) mod 26 = 5 → F</p>
 <p>Esto rompe <strong>todos</strong> los cifrados de sustitución simple. No importa cuál sea la clave — el patrón de frecuencias del idioma sobrevive al cifrado.</p>
 <h3 id="vigenere-la-respuesta-al-analisis-de-frecuencia-siglo-xvi">Vigenère — La respuesta al análisis de frecuencia (siglo XVI)</h3>
 <p>Vigenère usa una clave que se repite a lo largo del mensaje. Cada letra se cifra con un desplazamiento diferente según su posición:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Texto:   A T A C A R
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Clave:   L I M O N L
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Texto:   A T A C A R
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Clave:   L I M O N L
 </code></pre></div>
 <p>La misma letra puede cifrarse de formas distintas. El análisis de frecuencia directo ya no funciona. Se lo llamó <em>le chiffre indéchiffrable</em> — duró casi 300 años.</p>
 <h3 id="babbage-y-kasiski-lo-rompen-siglo-xix">Babbage y Kasiski lo rompen (siglo XIX)</h3>
@@ -1639,8 +1640,8 @@ C → F - Para C=2 → (2 + 3) mod 26 = 5 → F</p>
 <hr />
 <h2 id="aritmetica-modular">Aritmética Modular</h2>
 <p>La operación <code>a mod n</code> devuelve el resto de dividir <code>a</code> por <code>n</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>17 mod 5  =  2
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>-3 mod 26 = 23   (no -3)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>17 mod 5  =  2
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>-3 mod 26 = 23   (no -3)
 </code></pre></div>
 <p>Los cifrados trabajan en espacios finitos. El <em>módulo</em> se usará para limitar los elementos involucrados (claves, textos planos y textos cifrados) dentro de esa cantidad finita de elementos. </p>
 <p>En el caso de los cifrados clásicos, el alfabeto latino tiene 26 letras — todas las operaciones de cifrado clásico viven en <strong>Z<sub>26</sub></strong>.
@@ -1683,13 +1684,13 @@ Los cifrados que trabajan con bits, harán sus cálculos dentro de <strong>Z<sub
 </ul>
 <p>Los cifrados modernos combinan ambas en múltiples rondas.</p>
 <h3 id="caesar">Caesar</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>E(x) = (x + k) mod 26
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>D(x) = (x − k) mod 26
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>E(x) = (x + k) mod 26
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>D(x) = (x − k) mod 26
 </code></pre></div>
 <p>Espacio de claves: 25. Trivialmente rompible por fuerza bruta.</p>
 <h3 id="affine">Affine</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>E(x) = (a·x + b) mod 26
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>D(x) = a⁻¹·(x − b) mod 26
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>E(x) = (a·x + b) mod 26
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>D(x) = a⁻¹·(x − b) mod 26
 </code></pre></div>
 <p>Requiere que <code>mcd(a, 26) = 1</code> para que exista el inverso. Si no, el cifrado no es biyectivo y no se puede descifrar unívocamente.</p>
 <p>Valores válidos de <code>a</code>: 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25 → 12 opciones.
@@ -1697,7 +1698,7 @@ Valores de <code>b</code>: 0–25 → 26 opciones.
 Espacio de claves total: 12 × 26 = <strong>312 claves</strong>.</p>
 <h3 id="vigenere">Vigenère</h3>
 <p>Clave de longitud <code>n</code> que se repite. Cada letra se cifra con un Caesar distinto:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Cᵢ = (Pᵢ + Kᵢ mod n) mod 26
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Cᵢ = (Pᵢ + Kᵢ mod n) mod 26
 </code></pre></div>
 <p>Rompible con el ataque de Kasiski (deducir longitud de clave) + análisis de frecuencia por columna.</p>
 <h3 id="playfair">Playfair</h3>
