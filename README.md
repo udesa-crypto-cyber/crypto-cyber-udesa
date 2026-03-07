@@ -1,8 +1,8 @@
-# Criptografía y Ciberseguridad — 
+# Criptografía y Ciberseguridad
 
-Material de clases de la materia **Criptografía y Ciberseguridad** de la .
+Material de clases de la materia **Criptografía y Ciberseguridad**.
 
-🌐 **Sitio de la materia:** [-crypto-cyber.github.io/crypto-cyber-](https://-crypto-cyber.github.io/crypto-cyber-/)
+🌐 **Sitio de la materia:** [crypto-cyber.github.io/classes](https://crypto-cyber-classes.github.io//)
 
 ---
 
@@ -24,7 +24,3 @@ Si encontrás un error en el contenido, un link roto, o querés sugerir una mejo
 - La página o sección donde se encuentra (si aplica)
 
 ---
-
-## Programa
-
-Podés encontrar el programa de la materia en el [siguiente link](https://.edu.ar/en/cursos-y-materias)
