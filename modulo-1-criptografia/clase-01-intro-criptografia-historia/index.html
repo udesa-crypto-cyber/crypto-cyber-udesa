@@ -12,7 +12,7 @@
         <meta name="author" content="PaoGRodrigues">
       
       
-        <link rel="canonical" href="https://-crypto-cyber.github.io/crypto-cyber-/modulo-1-criptografia/clase-01-criptografia-historia/">
+        <link rel="canonical" href="https://-crypto-cyber.github.io/crypto-cyber-/modulo-1-criptografia/clase-01-intro-criptografia-historia/">
       
       
         <link rel="prev" href="../..">
@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#en-construccion" class="md-skip">
+        <a href="#clase-1-criptografia-clasica" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -450,6 +450,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase 1 — Criptografía Clásica
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -466,6 +484,268 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-la-criptografia-y-por-que-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué es la criptografía y por qué existe?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-una-narrativa-de-ataques-y-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia: una narrativa de ataques y respuestas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Historia: una narrativa de ataques y respuestas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-por-oscuridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad por oscuridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cesar-y-la-sustitucion-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        César y la sustitución simple
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#al-kindi-y-el-analisis-de-frecuencia-siglo-ix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Al-Kindi y el análisis de frecuencia (siglo IX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vigenere-la-respuesta-al-analisis-de-frecuencia-siglo-xvi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vigenère — La respuesta al análisis de frecuencia (siglo XVI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#babbage-y-kasiski-lo-rompen-siglo-xix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Babbage y Kasiski lo rompen (siglo XIX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enigma-el-salto-electromecanico-segunda-guerra-mundial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enigma — El salto electromecánico (Segunda Guerra Mundial)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-triada-cia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La Tríada CIA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-principio-de-kerckhoffs-1883" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El Principio de Kerckhoffs (1883)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos-de-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos de ataque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aritmetica-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aritmética Modular
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cifrados-clasicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cifrados Clásicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cifrados Clásicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sustitucion-y-permutacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sustitución y permutación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caesar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caesar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Affine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vigenere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vigenère
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playfair" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Playfair
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapa-de-la-criptografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapa de la criptografía
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-clave-de-esta-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptos clave de esta clase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -957,6 +1237,257 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-la-criptografia-y-por-que-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué es la criptografía y por qué existe?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-una-narrativa-de-ataques-y-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia: una narrativa de ataques y respuestas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Historia: una narrativa de ataques y respuestas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-por-oscuridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad por oscuridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cesar-y-la-sustitucion-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        César y la sustitución simple
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#al-kindi-y-el-analisis-de-frecuencia-siglo-ix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Al-Kindi y el análisis de frecuencia (siglo IX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vigenere-la-respuesta-al-analisis-de-frecuencia-siglo-xvi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vigenère — La respuesta al análisis de frecuencia (siglo XVI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#babbage-y-kasiski-lo-rompen-siglo-xix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Babbage y Kasiski lo rompen (siglo XIX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enigma-el-salto-electromecanico-segunda-guerra-mundial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enigma — El salto electromecánico (Segunda Guerra Mundial)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-triada-cia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La Tríada CIA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-principio-de-kerckhoffs-1883" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El Principio de Kerckhoffs (1883)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelos-de-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos de ataque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aritmetica-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aritmética Modular
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cifrados-clasicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cifrados Clásicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cifrados Clásicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sustitucion-y-permutacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sustitución y permutación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caesar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caesar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Affine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vigenere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vigenère
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playfair" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Playfair
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapa-de-la-criptografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapa de la criptografía
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-clave-de-esta-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptos clave de esta clase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -975,11 +1506,259 @@
   
 
 
-<h1 id="en-construccion">En construcción</h1>
+<h1 id="clase-1-criptografia-clasica">Clase 1 — Criptografía Clásica</h1>
 <blockquote>
-<p>Apuntes de esta clase próximamente.</p>
+<p><strong>Módulo:</strong> Criptografía<br />
+<strong>Recursos:</strong> <a href="https://gchq.github.io/CyberChef/">CyberChef</a></p>
 </blockquote>
-<p>Test</p>
+<hr />
+<h2 id="que-es-la-criptografia-y-por-que-existe">¿Qué es la criptografía y por qué existe?</h2>
+<p>La <strong>criptografía</strong> es una rama de la matemática que lidia con la transformación de la información para que solo pueda ser leída por quienes están autorizados. Su origen es tan antiguo como la necesidad humana de comunicarse en secreto — desde mensajes militares en la Antigua Roma hasta las comunicaciones cifradas que usamos hoy cada vez que abrimos un navegador.</p>
+<p>La <strong>ciberseguridad</strong> es el campo más amplio que se ocupa de proteger sistemas, redes y datos. La criptografía es una de sus herramientas fundamentales — pero no la única.</p>
+<p>Se cruzan cuando necesitamos garantizar que una comunicación sea segura: que nadie la intercepte, que nadie la modifique, y que sepamos con certeza quién la envió.</p>
+<hr />
+<h2 id="historia-una-narrativa-de-ataques-y-respuestas">Historia: una narrativa de ataques y respuestas</h2>
+<p>La historia de la criptografía no es una línea de tiempo de inventos — es una historia de <strong>ataques que rompen sistemas</strong> y <strong>respuestas que los superan</strong>.</p>
+<h3 id="seguridad-por-oscuridad">Seguridad por oscuridad</h3>
+<p>Los primeros sistemas asumían que su seguridad dependía de que el método fuera desconocido. El problema es evidente: cuando el método se descubre, todo el sistema colapsa.</p>
+<h3 id="cesar-y-la-sustitucion-simple">César y la sustitución simple</h3>
+<p>El cifrado César desplaza cada letra del alfabeto un número fijo de posiciones. Podemos, entonces, definir al cifrado César de la siguiente <em>manera elegante</em>:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>E(x) = (x + k) mod 26 
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>D(x) = (x - k) mod 26
+</code></pre></div>
+Siendo... 0=A, 1=B, 2=C, ... 24=Y, 25=Z → Total = 26 elementos.</p>
+<p>Ejemplo, con <code>k = 3</code>: 
+A → D - Para A=0 → (0 + 3) mod 26 = 3 → D
+B → E - Para B=1 → (1 + 3) mod 26 = 4 → E
+C → F - Para C=2 → (2 + 3) mod 26 = 5 → F
+...</p>
+<p>Entonces, si ciframos:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Texto:   A T A C A R
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Clave:   D W D F D U
+</code></pre></div></p>
+<p>Simple, pero rompible: sólo hay 25 claves posibles. Un atacante puede probarlas todas en minutos.</p>
+<p>El <strong>mod 26</strong> es lo que hace que el alfabeto sea <strong>circular</strong>: cuando se llega a la <strong>Z</strong> se vuelve a empezar por la <strong>A</strong>.</p>
+<h3 id="al-kindi-y-el-analisis-de-frecuencia-siglo-ix">Al-Kindi y el análisis de frecuencia (siglo IX)</h3>
+<p>El matemático árabe Al-Kindi descubrió que en <em>cualquier idioma las letras no aparecen con la misma frecuencia</em>. En español, las letras más comunes son <strong>E, A, O</strong>. Si en un ciphertext la letra más frecuente es X, probablemente X representa E.</p>
+<p>Esto rompe <strong>todos</strong> los cifrados de sustitución simple. No importa cuál sea la clave — el patrón de frecuencias del idioma sobrevive al cifrado.</p>
+<h3 id="vigenere-la-respuesta-al-analisis-de-frecuencia-siglo-xvi">Vigenère — La respuesta al análisis de frecuencia (siglo XVI)</h3>
+<p>Vigenère usa una clave que se repite a lo largo del mensaje. Cada letra se cifra con un desplazamiento diferente según su posición:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Texto:   A T A C A R
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Clave:   L I M O N L
+</code></pre></div>
+<p>La misma letra puede cifrarse de formas distintas. El análisis de frecuencia directo ya no funciona. Se lo llamó <em>le chiffre indéchiffrable</em> — duró casi 300 años.</p>
+<h3 id="babbage-y-kasiski-lo-rompen-siglo-xix">Babbage y Kasiski lo rompen (siglo XIX)</h3>
+<p>El ataque de Kasiski explota que la clave se <strong>repite</strong>:</p>
+<ol>
+<li>Buscar secuencias que se repiten en el ciphertext</li>
+<li>La distancia entre repeticiones es múltiplo de la longitud de la clave</li>
+<li>Con la longitud conocida, se divide el ciphertext en columnas y se aplica análisis de frecuencia a cada una</li>
+</ol>
+<h3 id="enigma-el-salto-electromecanico-segunda-guerra-mundial">Enigma — El salto electromecánico (Segunda Guerra Mundial)</h3>
+<p>Enigma tenía 158 quintillones de configuraciones posibles. Alan Turing y el equipo de Bletchley Park no atacaron el cifrado directamente — <strong>explotaron los errores humanos</strong>:</p>
+<ul>
+<li>Los operadores siempre empezaban los mensajes con frases predecibles</li>
+<li>Enigma nunca cifraba una letra como sí misma</li>
+</ul>
+<p><strong>Lección:</strong> los sistemas criptográficos los rompen las personas, no sólo las matemáticas.</p>
+<hr />
+<h2 id="la-triada-cia">La Tríada CIA</h2>
+<p>Los tres objetivos fundamentales de la seguridad de la información:</p>
+<table>
+<thead>
+<tr>
+<th>Objetivo</th>
+<th>Pregunta</th>
+<th>¿Qué lo garantiza?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Confidencialidad</strong></td>
+<td>¿Solo pueden acceder a la información quienes están autorizados?</td>
+<td>Cifrado</td>
+</tr>
+<tr>
+<td><strong>Integridad</strong></td>
+<td>¿La información no fue alterada en el camino?</td>
+<td>Hash / MAC</td>
+</tr>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td>¿La información está accesible cuando se la necesita?</td>
+<td>Backups / DDoS protection</td>
+</tr>
+</tbody>
+</table>
+<p>Son problemas <strong>independientes</strong>. Un sistema puede tener confidencialidad sin integridad, o integridad sin confidencialidad. En la práctica, casi siempre se necesitan los tres.</p>
+<hr />
+<h2 id="el-principio-de-kerckhoffs-1883">El Principio de Kerckhoffs (1883)</h2>
+<blockquote>
+<p><em>La seguridad de un sistema debe depender únicamente del secreto de la clave, nunca del secreto del algoritmo.</em></p>
+</blockquote>
+<p>En la práctica:
+- Los algoritmos se publican y los auditan miles de expertos
+- Los ataques conocidos se documentan y estudian públicamente
+- Una clave secreta es mucho más manejable que un algoritmo secreto</p>
+<p>Cualquier sistema que depende de "nadie sabe cómo funciona" ya está comprometido antes de empezar. El análisis de frecuencia de Al-Kindi demostró esto en el siglo IX.</p>
+<hr />
+<h2 id="modelos-de-ataque">Modelos de ataque</h2>
+<p>Antes de evaluar si un sistema es seguro, hay que definir qué capacidades tiene el atacante:</p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Qué tiene el atacante</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ciphertext-only</strong></td>
+<td>Solo mensajes cifrados</td>
+<td>Análisis de frecuencia sobre Vigenère</td>
+</tr>
+<tr>
+<td><strong>Known-plaintext</strong></td>
+<td>Pares (texto plano, cifrado)</td>
+<td>Turing con Enigma</td>
+</tr>
+<tr>
+<td><strong>Chosen-plaintext</strong></td>
+<td>Elige qué cifrar y ve el resultado</td>
+<td>Ataques modernos a block ciphers</td>
+</tr>
+<tr>
+<td><strong>Chosen-ciphertext</strong></td>
+<td>También elige qué descifrar</td>
+<td>Ataques a RSA mal implementado</td>
+</tr>
+</tbody>
+</table>
+<p>Estos modelos van a reaparecer en cada algoritmo que veamos durante toda la materia.</p>
+<hr />
+<h2 id="aritmetica-modular">Aritmética Modular</h2>
+<p>La operación <code>a mod n</code> devuelve el resto de dividir <code>a</code> por <code>n</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>17 mod 5  =  2
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>-3 mod 26 = 23   (no -3)
+</code></pre></div>
+<p>Los cifrados trabajan en espacios finitos. El <em>módulo</em> se usará para limitar los elementos involucrados (claves, textos planos y textos cifrados) dentro de esa cantidad finita de elementos. </p>
+<p>En el caso de los cifrados clásicos, el alfabeto latino tiene 26 letras — todas las operaciones de cifrado clásico viven en <strong>Z<sub>26</sub></strong>.
+Los cifrados que trabajan con bits, harán sus cálculos dentro de <strong>Z<sub>2</sub></strong>.</p>
+<p>Operaciones relevantes:</p>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Ejemplo en Z<sub>26</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Suma</td>
+<td>(20 + 9) mod 26 = 3</td>
+</tr>
+<tr>
+<td>Resta</td>
+<td>(3 − 9) mod 26 = 20</td>
+</tr>
+<tr>
+<td>Multiplicación</td>
+<td>(7 × 3) mod 26 = 21</td>
+</tr>
+<tr>
+<td>Inverso multiplicativo</td>
+<td>7<sup>-1</sup> mod 26 = 15, porque 7 × 15 mod 26 = 1</td>
+</tr>
+</tbody>
+</table>
+<p>El inverso multiplicativo existe solo cuando <code>mcd(a, n) = 1</code>.</p>
+<hr />
+<h2 id="cifrados-clasicos">Cifrados Clásicos</h2>
+<h3 id="sustitucion-y-permutacion">Sustitución y permutación</h3>
+<p>Dos operaciones base de todo cifrado clásico:</p>
+<ul>
+<li><strong>Sustitución:</strong> reemplazar un símbolo por otro (Caesar, Vigenère, Affine)</li>
+<li><strong>Permutación / transposición:</strong> reorganizar los símbolos sin cambiarlos (Playfair)</li>
+</ul>
+<p>Los cifrados modernos combinan ambas en múltiples rondas.</p>
+<h3 id="caesar">Caesar</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>E(x) = (x + k) mod 26
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>D(x) = (x − k) mod 26
+</code></pre></div>
+<p>Espacio de claves: 25. Trivialmente rompible por fuerza bruta.</p>
+<h3 id="affine">Affine</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>E(x) = (a·x + b) mod 26
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>D(x) = a⁻¹·(x − b) mod 26
+</code></pre></div>
+<p>Requiere que <code>mcd(a, 26) = 1</code> para que exista el inverso. Si no, el cifrado no es biyectivo y no se puede descifrar unívocamente.</p>
+<p>Valores válidos de <code>a</code>: 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25 → 12 opciones.
+Valores de <code>b</code>: 0–25 → 26 opciones.
+Espacio de claves total: 12 × 26 = <strong>312 claves</strong>.</p>
+<h3 id="vigenere">Vigenère</h3>
+<p>Clave de longitud <code>n</code> que se repite. Cada letra se cifra con un Caesar distinto:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Cᵢ = (Pᵢ + Kᵢ mod n) mod 26
+</code></pre></div>
+<p>Rompible con el ataque de Kasiski (deducir longitud de clave) + análisis de frecuencia por columna.</p>
+<h3 id="playfair">Playfair</h3>
+<p>Cifrado de dígrafo — opera sobre pares de letras en lugar de letras individuales. Usa una matriz 5×5 construida a partir de una clave.</p>
+<p>Reglas de cifrado:
+- Mismo renglón: desplazar a la derecha
+- Misma columna: desplazar hacia abajo
+- Caso general: intercambio de columnas en el rectángulo formado</p>
+<p>Más resistente al análisis de frecuencia simple porque trabaja con 676 pares posibles en lugar de 26 letras.</p>
+<hr />
+<h2 id="mapa-de-la-criptografia">Mapa de la criptografía</h2>
+<p>Los algoritmos que vamos a ver en la materia, organizados por número de claves:</p>
+<table>
+<thead>
+<tr>
+<th>Sin clave</th>
+<th>Clave única (simétrica)</th>
+<th>Dos claves (asimétrica)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Funciones Hash</td>
+<td>Algoritmos clásicos</td>
+<td>Cifrado asimétrico</td>
+</tr>
+<tr>
+<td>Generadores pseudo-aleatorios</td>
+<td>Cifrado por bloques</td>
+<td>Firmas digitales</td>
+</tr>
+<tr>
+<td></td>
+<td>Cifrado por flujos</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>MAC</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conceptos-clave-de-esta-clase">Conceptos clave de esta clase</h2>
+<ul>
+<li><strong>Criptografía:</strong> transformar información para garantizar confidencialidad, integridad y autenticidad.</li>
+<li><strong>Tríada CIA:</strong> tres objetivos independientes que casi siempre se necesitan juntos.</li>
+<li><strong>Seguridad por oscuridad:</strong> depender del secreto del algoritmo. Siempre falla.</li>
+<li><strong>Principio de Kerckhoffs:</strong> la seguridad está en la clave, no en el algoritmo.</li>
+<li><strong>Análisis de frecuencia:</strong> rompe toda sustitución simple. Motor de la evolución criptográfica.</li>
+<li><strong>Modelos de ataque:</strong> ciphertext-only → known-plaintext → chosen-plaintext → chosen-ciphertext.</li>
+<li><strong>Aritmética modular:</strong> el lenguaje matemático base de toda la criptografía clásica y moderna.</li>
+</ul>
+<hr />
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li>Paar, C. &amp; Pelzl, J. — Understanding Cryptography</li>
+<li>Stallings, W. — Cryptography and Network Security</li>
+</ul>
+<hr />
 
 
 
