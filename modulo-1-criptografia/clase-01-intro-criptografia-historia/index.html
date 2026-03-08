@@ -1655,7 +1655,7 @@
 <h3 id="seguridad-por-oscuridad">Seguridad por oscuridad</h3>
 <p>Los primeros sistemas asumían que su seguridad dependía de que el método fuera desconocido. El problema es evidente: cuando el método se descubre, todo el sistema colapsa.</p>
 <h3 id="los-primeros-cifrados">Los primeros cifrados</h3>
-<p>La necesidad de transmitir mensajes secretos se remonta a la época Antigua. Como ejemplo:
+<p>La necesidad de transmitir mensajes secretos se remonta a la época Antigua. Como ejemplo:<br />
 * jeroglíficos no estándar tallados en la pared de una tumba del Antiguo Egipto (1900 a. C.)
 * tablillas de arcilla encontradas en Mesopotamia contenían escritura cifrada que se cree que son recetas secretas para esmaltes cerámicos (1500 a. C.)
 * antiguos espartanos utilizaron un primer sistema de cifrado desordenando las letras en sus comunicaciones militares (siglo V a. C.)</p>
@@ -1668,7 +1668,7 @@
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>E(x) = (x + k) mod 26 
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>D(x) = (x - k) mod 26
 </code></pre></div>
-Siendo... 0=A, 1=B, 2=C, ... 24=Y, 25=Z → Total = 26 elementos.</p>
+Siendo... 0=A, 1=B, 2=C, ... 24=Y, 25=Z → Total = 26 elementos.  </p>
 <p>Ejemplo, con <code>k = 3</code>: </p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>A → D - Para A=0 → (0 + 3) mod 26 = 3 → D
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>B → E - Para B=1 → (1 + 3) mod 26 = 4 → E
@@ -1679,12 +1679,17 @@ Siendo... 0=A, 1=B, 2=C, ... 24=Y, 25=Z → Total = 26 elementos.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Texto:   A T A C A R
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Clave:   D W D F D U
 </code></pre></div></p>
-<p>Simple, pero rompible: sólo hay 25 claves posibles. Un atacante puede probarlas todas en minutos.</p>
+<p>Simple, pero rompible: sólo hay 25 claves posibles. Un atacante puede probarlas todas en minutos.  </p>
 <p>El <strong>mod 26</strong> es lo que hace que el alfabeto sea <strong>circular</strong>: cuando se llega a la <strong>Z</strong> se vuelve a empezar por la <strong>A</strong>.</p>
 <h3 id="al-kindi-y-el-analisis-de-frecuencia-siglo-ix">Al-Kindi y el análisis de frecuencia (siglo IX)</h3>
 <p>El matemático árabe Al-Kindi descubrió que en <em>cualquier idioma las letras no aparecen con la misma frecuencia</em>. En español, las letras más comunes son <strong>E, A, O</strong>. Si en un ciphertext la letra más frecuente es X, probablemente X representa E.</p>
 <p>Esto rompe <strong>todos</strong> los cifrados de sustitución simple. No importa cuál sea la clave — el patrón de frecuencias del idioma sobrevive al cifrado.</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>One way to solve an encrypted message, if we know its language, is to find a different plaintext ofthe same language long enough to fill one sheet or so, and then we count the occurrences of each letter. We call the most frequendy occurring letter the &quot;first,&quot; the next most occurring letter the &quot;second,&quot; the following most occurring letter the &quot;third,&quot; and so on. until we account for all the different letters in the plaintext sample. Then we look at the ciphertext we want to solve and we also classify its symbols. We find the most occurring symbol and change it to the form of the &quot;first&quot; letter of the plaintext sample, the next most common symbol is changed to the form of the &quot;second&quot; letter, and the following most common symbol is changed to the form of the &quot;third&quot; letter, and so on, until we account for all symbols ofthe cryptogram we want to solve.
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>One way to solve an encrypted message, if we know its language, is to find a different plaintext ofthe same language long enough to fill one sheet or so,
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a> and then we count the occurrences of each letter. We call the most frequendy occurring letter the &quot;first,&quot; the next most occurring letter the &quot;second,&quot; 
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a> the following most occurring letter the &quot;third,&quot; and so on. until we account for all the different letters in the plaintext sample. Then we look at the 
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a> ciphertext we want to solve and we also classify its symbols. We find the most occurring symbol and change it to the form of the &quot;first&quot; letter of the 
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a> plaintext sample, the next most common symbol is changed to the form of the &quot;second&quot; letter, and the following most common symbol is changed to the form 
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a> of the &quot;third&quot; letter, and so on, until we account for all symbols ofthe cryptogram we want to solve.
 </code></pre></div>
 <em>Fragmento de </em><em>A Manuscript on Deciphering Cryptographic Messages</em><em> de Al-Kindi</em></p>
 <h3 id="vigenere-la-respuesta-al-analisis-de-frecuencia-siglo-xvi">Vigenère — La respuesta al análisis de frecuencia (siglo XVI)</h3>
@@ -1698,15 +1703,15 @@ Siendo... 0=A, 1=B, 2=C, ... 24=Y, 25=Z → Total = 26 elementos.</p>
 <p>El ataque de Kasiski explota que la clave se <strong>repite</strong>.
 Si la clave es <strong>LIMON</strong> (longitud 5) y el mensaje es largo, la clave se va a repetir: LIMONLIMONLIMONLIM... Cada letra en las posiciones 1,6,11,16... se cifra con la misma letra L. Cada letra en las posiciones 2,7,12,17... con la letra I.</p>
 <p>Entonces, si la misma secuencia de letras en el texto plano cae alineada con la misma parte de la clave en dos lugares distintos, van a producir  <strong>la misma secuencia de letras en el texto cifrado</strong>. Y la distancia entre esas dos apariciones va a ser múltiplo de la longitud de la clave.</p>
-<p>En pasos:
+<p>En pasos:<br />
 1. Buscar secuencias repetidas en el ciphertext.
 2. Calcular las distancias entre repeticiones. Ej, primera apacición: posición 10. Segunda aparición, posición 40. Distancia: 40 - 10 = 30
 3. Factorizar las distancias: 30 = 2 * 3 * 5. La longitud de la clave tiene que ser un divisor de esa distancia (o un producto de ellos).
-4. Encontrar el factor más frecuente. Con varias distancias factorizadas, se busca el que más aparece. </p>
-<p>Ej, Distancia 1: 30 → 2,3,5
-    Distancia 2: 20 → 2,4,5
-    Distancia 3: 15 → 3, 5
-    El 5 aparece en las 3 distancias → Longitud probable: 5</p>
+4. Encontrar el factor más frecuente. Con varias distancias factorizadas, se busca el que más aparece.  </p>
+<p>Ej, Distancia 1: 30 → 2,3,5<br />
+    Distancia 2: 20 → 2,4,5<br />
+    Distancia 3: 15 → 3, 5<br />
+    El 5 aparece en las 3 distancias → Longitud probable: 5  </p>
 <ol>
 <li>Dividir el texto cifrado en columnas. Con la longitud 5 supuesta, se divide el texto cifrado en columnas de longitud 5. Entonces, cada columna fue cifrada <strong>con la misma letra de la clave</strong> (cada columna es un cifrado Caesar independiente)</li>
 <li>Aplicar análisis de frecuencia en cada columna. Como cada columna es un cifrado Caesar independiente, sabemos que tiene la distribución de frecuencias del idioma.</li>
@@ -1715,27 +1720,27 @@ Si la clave es <strong>LIMON</strong> (longitud 5) y el mensaje es largo, la cla
 <blockquote>
 <p>Conclusión: Este ataque funciona porque la repetición de la clave introduce repetición en el texto cifrado (y ahí ya se puede aplicar análisis estadístico).</p>
 </blockquote>
-<p>Cuándo falla el ataque?
-* Texto muy corto (pocas repeticiones, no hay suficientes datos)
-* La clave es tan larga como el mensaje (se convierte en <em>One time Pad</em> (<a href="../clase-02-algoritmos-clasicos-flujos/">Clase 2</a>))</p>
+<p>Cuándo falla el ataque?<br />
+<em> Texto muy corto (pocas repeticiones, no hay suficientes datos)
+* La clave es tan larga como el mensaje (se convierte en </em>One time Pad* (<a href="../clase-02-algoritmos-clasicos-flujos/">Clase 2</a>))</p>
 <h3 id="enigma-el-salto-electromecanico-segunda-guerra-mundial">Enigma — El salto electromecánico (Segunda Guerra Mundial)</h3>
 <p>Enigma era una máquina electromecánica de cifrado usada por el ejército alemán durante la Segunda Guerra Mundial. Cada vez que se presionaba una tecla, la máquina transformaba la letra y encendía una lámpara con la letra cifrada.</p>
 <p>Tenía 158 quintillones de configuraciones posibles. Cada día, los operadores recibían un libro de códigos donde se especificaba la configuración de la máquina: qué rotores usar, en qué orden y cómo configurar el plugboard.</p>
-<p>Por qué funcionaba? 
+<p>Por qué funcionaba?<br />
 La misma letra cifrada dos veces consecutivas producía distintos resultados. El análisis de frecuencias no funcionaba. Estadísticamente se parecía a un <em>OTP</em>.</p>
-<p>Alan Turing y el equipo de Bletchley Park no atacaron el cifrado directamente — <strong>explotaron los errores humanos</strong>:</p>
+<p>Alan Turing y el equipo de Bletchley Park no atacaron el cifrado directamente — <strong>explotaron los errores humanos</strong>:  </p>
 <ul>
-<li>Los operadores siempre empezaban los mensajes con frases predecibles. Conocer fragmentos del texto plano de antemano reducía enormemente el espacio de búsqueda.</li>
-<li>Enigma nunca cifraba una letra como sí misma. Si el texto plano era <em>AAAA</em>, el texto cifrado no podía contener ninguna <em>A</em>. Eso descartaba millones de configuraciones.</li>
-<li>Tenía un error crítico: la seguridad del sistema dependía del secreto de la configuración y no sólo de la clave. Contradecía el principio de Kerckhoffs.</li>
+<li>Los operadores siempre empezaban los mensajes con frases predecibles. Conocer fragmentos del texto plano de antemano reducía enormemente el espacio de búsqueda.  </li>
+<li>Enigma nunca cifraba una letra como sí misma. Si el texto plano era <em>AAAA</em>, el texto cifrado no podía contener ninguna <em>A</em>. Eso descartaba millones de configuraciones.  </li>
+<li>Tenía un error crítico: la seguridad del sistema dependía del secreto de la configuración y no sólo de la clave. Contradecía el principio de Kerckhoffs.  </li>
 </ul>
 <p><strong>Conclusión:</strong> Un sistema criptográfico lo rompen la matemática y las personas.</p>
 <p><strong>Links al funcionamiento de Enigma</strong></p>
-<p><a href="https://www.youtube.com/watch?v=G2_Q9FoD-oQ">Máquina Enigma</a>
-<a href="https://www.youtube.com/watch?v=V4V2bpZlqx8">Fallas en Enigma</a></p>
+<p><a href="https://www.youtube.com/watch?v=G2_Q9FoD-oQ">Máquina Enigma</a><br />
+<a href="https://www.youtube.com/watch?v=V4V2bpZlqx8">Fallas en Enigma</a>  </p>
 <hr />
 <h2 id="la-triada-cia">La Tríada CIA</h2>
-<p>Los tres objetivos fundamentales de la seguridad de la información:</p>
+<p>Los tres objetivos fundamentales de la seguridad de la información:  </p>
 <table>
 <thead>
 <tr>
@@ -1768,7 +1773,7 @@ La misma letra cifrada dos veces consecutivas producía distintos resultados. El
 <blockquote>
 <p><em>La seguridad de un sistema debe depender únicamente del secreto de la clave, nunca del secreto del algoritmo.</em></p>
 </blockquote>
-<p>En la práctica:
+<p>En la práctica:<br />
 - Los algoritmos se publican y los auditan miles de expertos
 - Los ataques conocidos se documentan y estudian públicamente
 - Una clave secreta es mucho más manejable que un algoritmo secreto</p>
@@ -1776,8 +1781,8 @@ La misma letra cifrada dos veces consecutivas producía distintos resultados. El
 <hr />
 <h2 id="criptoanalisis">Criptoanálisis</h2>
 <p>Definimos lo modelos de ataques basándonos en la cantidad de información que maneja el atacante.</p>
-<p>Se presuponse que el atacante <strong>sabe qué algoritmo se está utilizando en el cifrado</strong> y el <strong>peor caso:</strong> tiene tiempo y recursos infinitos.
-El problema más difícil se presenta cuando lo único que tiene disponible es el <em>texto cifrado</em>. </p>
+<p>Se presuponse que el atacante <strong>sabe qué algoritmo se está utilizando en el cifrado</strong> y el <strong>peor caso:</strong> tiene tiempo y recursos infinitos.<br />
+El problema más difícil se presenta cuando lo único que tiene disponible es el <em>texto cifrado</em>.  </p>
 <table>
 <thead>
 <tr>
@@ -1809,12 +1814,12 @@ El problema más difícil se presenta cuando lo único que tiene disponible es e
 </tr>
 </tbody>
 </table>
-<p>Estos modelos van a reaparecer en los algoritmo que veamos durante toda la materia.</p>
-<p>Como se verá en la siguiente clase, con la excepción de <em>One time pad</em>, no hay un algoritmo de cifrado que sea <em>incondicionalmente seguro</em>.</p>
-<p>Entonces, vamos a decir que un esquema de cifrado es <em>computacionalmente seguro</em> si cumple alguno (o ambos) de estos dos criterios:</p>
+<p>Estos modelos van a reaparecer en los algoritmo que veamos durante toda la materia.  </p>
+<p>Como se verá en la siguiente clase, con la excepción de <em>One time pad</em>, no hay un algoritmo de cifrado que sea <em>incondicionalmente seguro</em>.  </p>
+<p>Entonces, vamos a decir que un esquema de cifrado es <em>computacionalmente seguro</em> si cumple alguno (o ambos) de estos dos criterios:  </p>
 <blockquote>
-<p>El costo de romper el cifrado excede el valor de la información cifrada.
-El tiempo requerido para romper el cifrado excede el tiempo de la vida de utilidad de la información cifrada.</p>
+<p>El costo de romper el cifrado excede el valor de la información cifrada.<br />
+El tiempo requerido para romper el cifrado excede el tiempo de la vida de utilidad de la información cifrada.  </p>
 </blockquote>
 <p><em>Nota: muchos de estos conceptos vamos a retomarlos en la <a href="../clase-02-algoritmos-clasicos-flujos/">Clase 2</a></em></p>
 <hr />
@@ -1823,10 +1828,10 @@ El tiempo requerido para romper el cifrado excede el tiempo de la vida de utilid
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>17 mod 5  =  2
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>-3 mod 26 = 23   (no -3)
 </code></pre></div>
-<p>Los cifrados trabajan en espacios finitos. El <em>módulo</em> se usará para limitar los elementos involucrados (claves, textos planos y textos cifrados) dentro de esa cantidad finita de elementos. </p>
+<p>Los cifrados trabajan en espacios finitos. El <em>módulo</em> se usará para limitar los elementos involucrados (claves, textos planos y textos cifrados) dentro de esa cantidad finita de elementos.  </p>
 <p>En el caso de los cifrados clásicos, el alfabeto latino tiene 26 letras — todas las operaciones de cifrado clásico viven en <strong>Z<sub>26</sub></strong>.
-Los cifrados que trabajan con bits, harán sus cálculos dentro de <strong>Z<sub>2</sub></strong>.</p>
-<p>Operaciones relevantes:</p>
+Los cifrados que trabajan con bits, harán sus cálculos dentro de <strong>Z<sub>2</sub></strong>.  </p>
+<p>Operaciones relevantes:  </p>
 <table>
 <thead>
 <tr>
@@ -1854,49 +1859,49 @@ Los cifrados que trabajan con bits, harán sus cálculos dentro de <strong>Z<sub
 </tbody>
 </table>
 <p>En aritmética normal, 7<sup>-1</sup> = 1/7 = 0,1428...
-En aritmética modular, la división no existe. El inverso es un entero.</p>
-<p>El inverso de <strong>a</strong> en Z<sub>m</sub> es el número <strong>b</strong> tal que <strong>a * b ≡ 1 (mod m)</strong>.</p>
+En aritmética modular, la división no existe. El inverso es un entero.  </p>
+<p>El inverso de <strong>a</strong> en Z<sub>m</sub> es el número <strong>b</strong> tal que <strong>a * b ≡ 1 (mod m)</strong>.  </p>
 <blockquote>
-<p>El inverso multiplicativo existe sí y sólo sí cuando <code>mcd(a, n) = 1</code>, es decir, son <strong>son coprimos</strong>, el único divisor común que tienen entre ellos es el <strong>1</strong>.</p>
+<p>El inverso multiplicativo existe sí y sólo sí cuando <code>mcd(a, n) = 1</code>, es decir, son <strong>son coprimos</strong>, el único divisor común que tienen entre ellos es el <strong>1</strong>.  </p>
 </blockquote>
-<p>Ej: Inverso de 7 en Z<sub>26</sub> :</p>
-<p>Buscamos b tal que:  7 * b ≡ 1 (mod 26)</p>
-<p>Probando:
-  7 * 1  = 7    →  7 mod 26 = 7   (no)
-  7 * 2  = 14   →  14 mod 26 = 14 (no)
-  7 * 3  = 21   →  21 mod 26 = 21 (no)
-  7 * 4  = 28   →  28 mod 26 = 2  (no)
-  ...
-  7 * 15 = 105  →  105 mod 26 = 1 (SI!)</p>
-<p>Por lo tanto: 7<sup>-1</sup> mod 26 = 15</p>
-<p>Verificamos: 105 (mod 26) = 4 * 26 +1 = 104 + 1 = 105</p>
+<p>Ej: Inverso de 7 en Z<sub>26</sub> :  </p>
+<p>Buscamos b tal que:  7 * b ≡ 1 (mod 26). </p>
+<p>Probando:<br />
+  7 * 1  = 7    →  7 mod 26 = 7   (no)<br />
+  7 * 2  = 14   →  14 mod 26 = 14 (no)<br />
+  7 * 3  = 21   →  21 mod 26 = 21 (no)<br />
+  7 * 4  = 28   →  28 mod 26 = 2  (no)<br />
+  ...<br />
+  7 * 15 = 105  →  105 mod 26 = 1 (SI!)  </p>
+<p>Por lo tanto: 7<sup>-1</sup> mod 26 = 15  </p>
+<p>Verificamos: 105 (mod 26) = 4 * 26 +1 = 104 + 1 = 105  </p>
 <hr />
 <h2 id="cifrados-monoalfabeticos">Cifrados monoalfabéticos</h2>
-<p>Los cifrados monoafabéticos usan un solo alfabeto (mapeo del texto plano al texto cifrado) para cifrar todo el mensaje.
+<p>Los cifrados monoafabéticos usan un solo alfabeto (mapeo del texto plano al texto cifrado) para cifrar todo el mensaje.<br />
 Ejemplos de estos son el cifrado Caesar y Affine.</p>
 <h2 id="cifrados-polialfabeticos">Cifrados polialfabéticos</h2>
-<p>Los cifrados polialfabéticos utilizan <em>diferentes sustituciones monoalfabéticas</em> a medida que se avanza en el texto plano.
+<p>Los cifrados polialfabéticos utilizan <em>diferentes sustituciones monoalfabéticas</em> a medida que se avanza en el texto plano.<br />
 El más conocido (y simple) es el Cifrado Vigenere, que usa un cifrado Caesar por cada letra del texto plano, y Playfair que es un cifrado de dígrafo (pares de letras).</p>
 <hr />
 <h2 id="cifrados-clasicos">Cifrados Clásicos</h2>
 <h3 id="sustitucion-y-permutacion">Sustitución y permutación</h3>
-<p>Dos operaciones base de todo cifrado clásico:</p>
+<p>Dos operaciones base de todo cifrado clásico:  </p>
 <ul>
-<li><strong>Sustitución:</strong> reemplazar un símbolo por otro.</li>
-<li><strong>Permutación / transposición:</strong> reorganizar los símbolos sin cambiarlos.</li>
+<li><strong>Sustitución:</strong> reemplazar un símbolo por otro.  </li>
+<li><strong>Permutación / transposición:</strong> reorganizar los símbolos sin cambiarlos.  </li>
 </ul>
 <blockquote>
-<p>Los cifrados modernos combinan ambas en múltiples rondas.</p>
+<p>Los cifrados modernos combinan ambas en múltiples rondas.  </p>
 </blockquote>
 <h2 id="cifrados-monoalfabeticos-y-polialfabeticos">Cifrados monoalfabéticos y polialfabéticos</h2>
 <ul>
 <li>
 <p><strong>Monoalfabéticos:</strong> los cifrados monoalfabéticos usan un solo alfabeto (mapeo del texto plano al texto cifrado) para cifrar todo el mensaje.
-Ejemplos de estos son el cifrado Caesar y Affine.</p>
+Ejemplos de estos son el cifrado Caesar y Affine.  </p>
 </li>
 <li>
 <p><strong>Polialfabéticos:</strong> los cifrados polialfabéticos utilizan <em>diferentes sustituciones monoalfabéticas</em> a medida que se avanza en el texto plano.
-El más conocido (y simple) es el Cifrado Vigenere, que usa un cifrado Caesar por cada letra del texto plano, y Playfair que es un cifrado de dígrafo (pares de letras).</p>
+El más conocido (y simple) es el Cifrado Vigenere, que usa un cifrado Caesar por cada letra del texto plano, y Playfair que es un cifrado de dígrafo (pares de letras).  </p>
 </li>
 </ul>
 <h3 id="definiciones-formales">Definiciones formales</h3>
@@ -1911,45 +1916,45 @@ El más conocido (y simple) es el Cifrado Vigenere, que usa un cifrado Caesar po
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>D(y) = a⁻¹ * (y − b) mod 26
 </code></pre></div>
 <p>Requiere que <code>mcd(a, 26) = 1</code> para que exista el inverso. Si no, el cifrado no es biyectivo y no se puede descifrar unívocamente.</p>
-<p>Valores válidos de <code>a</code>: 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25 → 12 opciones.
-Valores de <code>b</code>: 0–25 → 26 opciones.
-Espacio de claves total: 12 × 26 = <strong>312 claves</strong>.</p>
+<p>Valores válidos de <code>a</code>: 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25 → 12 opciones.<br />
+Valores de <code>b</code>: 0–25 → 26 opciones.<br />
+Espacio de claves total: 12 × 26 = <strong>312 claves</strong>.  </p>
 <p>Generaliza la definición del cifrado Caesar.</p>
 <h4 id="vigenere">Vigenère</h4>
-<p>Clave de longitud <code>n</code> que se repite hasta completar el mapeo del texto plano. Cada letra del texto plano se va a mover hacia adelante tantas posiciones como indique el valor de la letra en la clave. </p>
-<p>Cada letra se cifra con un Caesar distinto, <em>por eso se lo considera polialfabético</em>.</p>
-<p>Cómo escribimos entonces la definición de manera elegante?
-Texto plano → P = p<sub>0</sub>, p<sub>1</sub>, p<sub>2</sub>... p<sub>r-1</sub>
-Clave → K = k<sub>0</sub>, k<sub>1</sub>, k<sub>2</sub>... k<sub>n-1</sub>
-donde <em>n &lt; r</em>, es decir que la cantidad de letras de la clave es <strong>menor</strong> que la cantidad de letras del texto plano.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>E(xᵢ) = (xᵢ + Kᵢ mod n) mod 26
+<p>Clave de longitud <code>n</code> que se repite hasta completar el mapeo del texto plano. Cada letra del texto plano se va a mover hacia adelante tantas posiciones como indique el valor de la letra en la clave.  </p>
+<p>Cada letra se cifra con un Caesar distinto, <em>por eso se lo considera polialfabético</em>.  </p>
+<p>Cómo escribimos entonces la definición de manera elegante?<br />
+Texto plano → P = p<sub>0</sub>, p<sub>1</sub>, p<sub>2</sub>... p<sub>r-1</sub><br />
+Clave → K = k<sub>0</sub>, k<sub>1</sub>, k<sub>2</sub>... k<sub>n-1</sub> 
+donde <em>n &lt; r</em>, es decir que la cantidad de letras de la clave es <strong>menor</strong> que la cantidad de letras del texto plano.  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>E(xᵢ) = (xᵢ + Kᵢ mod n) mod 26  
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>D(yᵢ) = (yᵢ - Kᵢ mod n) mod 26 (desplazamiento inverso)
 </code></pre></div>
-<p>Rompible con el ataque de Kasiski (deducir longitud de clave) + análisis de frecuencia por columna.</p>
-<p>Caesar es un caso especial de Vigenère, en donde <em>n = 1</em>: la clave tiene una sola letra y ser repite durante todo el texto plano. En Vigenère <em>n &gt; 1</em>.</p>
+<p>Rompible con el ataque de Kasiski (deducir longitud de clave) + análisis de frecuencia por columna.  </p>
+<p>Caesar es un caso especial de Vigenère, en donde <em>n = 1</em>: la clave tiene una sola letra y ser repite durante todo el texto plano. En Vigenère <em>n &gt; 1</em>.  </p>
 <h4 id="playfair">Playfair</h4>
-<p>Usado por los británicos para cifrar mensajes del telégrafo.</p>
-<p>Cifrado de dígrafo — opera sobre pares de letras en lugar de letras individuales. Usa una matriz 5×5 construida a partir de una clave. </p>
-<p>Matriz:
-- Se coloca la clave en la primera fila (si es más larga, se continúa hacia la segunda).
-- Se completa el resto de la matriz con las letras del alfabeto que falten en orden y <em>excluyendo</em> las letras de la clave.</p>
-<p>Reglas de cifrado:
-- Mismo renglón: desplazar a la derecha
-- Misma columna: desplazar hacia abajo
-- Caso general: intercambio de columnas en el rectángulo formado</p>
-<p>Para descifrar, las reglas se invierten:
-- Mismo renglón: desplazar a la izquierda
-- Misma columna: desplazar hacia arriba
-- Caso general: intercambio de columnas en el rectángulo formado</p>
-<p>Más resistente al análisis de frecuencia simple porque trabaja con 676 pares posibles en lugar de 26 letras.</p>
-<p>Cómo se rompe?
-- Análisis de frecuencia de digrafos
-- Fuerza bruta para adivinar la clave (sabiendo que la matriz 5x5 no tiene letras repetidas)
-- <em>Known plain-text</em>: se conoce parte del texto plano y parte del cifrado, por lo que se puede intentar deduciar la clave o la matriz (la matriz es fija).
-- <em>Choosen plain-text</em>: como se puede generar texto cifrado, se pueden diseñar pares de letras para obtener los pares cifrados específicos y reconstruir la clave.</p>
+<p>Usado por los británicos para cifrar mensajes del telégrafo.  </p>
+<p>Cifrado de dígrafo — opera sobre pares de letras en lugar de letras individuales. Usa una matriz 5×5 construida a partir de una clave.  </p>
+<p>Matriz:<br />
+<em> Se coloca la clave en la primera fila (si es más larga, se continúa hacia la segunda).<br />
+</em> Se completa el resto de la matriz con las letras del alfabeto que falten en orden y <em>excluyendo</em> las letras de la clave.  </p>
+<p>Reglas de cifrado:<br />
+<em> Mismo renglón: desplazar a la derecha<br />
+</em> Misma columna: desplazar hacia abajo<br />
+* Caso general: intercambio de columnas en el rectángulo formado  </p>
+<p>Para descifrar, las reglas se invierten:<br />
+<em> Mismo renglón: desplazar a la izquierda<br />
+</em> Misma columna: desplazar hacia arriba<br />
+* Caso general: intercambio de columnas en el rectángulo formado  </p>
+<p>Más resistente al análisis de frecuencia simple porque trabaja con 676 pares posibles en lugar de 26 letras.  </p>
+<p>Cómo se rompe?<br />
+<em> Análisis de frecuencia de digrafos<br />
+</em> Fuerza bruta para adivinar la clave (sabiendo que la matriz 5x5 no tiene letras repetidas).<br />
+<em> </em>Known plaintext<em>: se conoce parte del texto plano y parte del cifrado, por lo que se puede intentar deduciar la clave o la matriz (la matriz es fija)<br />
+</em> <em>Choosen plaintext</em>: como se puede generar texto cifrado, se pueden diseñar pares de letras para obtener los pares cifrados específicos y reconstruir la clave.  </p>
 <hr />
 <h2 id="mapa-de-algoritmos">Mapa de algoritmos</h2>
-<p>Los algoritmos que vamos a ver en la materia, organizados por número de claves:</p>
+<p>Los algoritmos que vamos a ver en la materia, organizados por número de claves:  </p>
 <table>
 <thead>
 <tr>
