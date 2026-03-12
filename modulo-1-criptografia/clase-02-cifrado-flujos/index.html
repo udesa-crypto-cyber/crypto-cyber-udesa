@@ -12,13 +12,13 @@
         <meta name="author" content="PaoGRodrigues">
       
       
-        <link rel="canonical" href="https://crypto-cyber-classes.github.io/crypto-cyber/modulo-1-criptografia/clase-01-intro-criptografia-historia/">
+        <link rel="canonical" href="https://crypto-cyber-classes.github.io/crypto-cyber/modulo-1-criptografia/clase-02-cifrado-flujos/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../clase-01-intro-criptografia-historia/">
       
       
-        <link rel="next" href="../clase-02-cifrado-flujos/">
+        <link rel="next" href="../clase-03-cifrado-bloques/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Clase 1 — Criptografía Clásica - Criptografía y Ciberseguridad</title>
+        <title>Clase 2 — Algoritmos Clásicos y Flujos - Criptografía y Ciberseguridad</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#clase-1-criptografia-clasica" class="md-skip">
+        <a href="#clase-2-cifrado-simetrico-por-flujos" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Clase 1 — Criptografía Clásica
+              Clase 2 — Algoritmos Clásicos y Flujos
             
           </span>
         </div>
@@ -253,7 +253,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../clase-01-intro-criptografia-historia/" class="md-tabs__link">
           
   
   
@@ -438,6 +438,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../clase-01-intro-criptografia-historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase 1 — Criptografía Clásica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -457,7 +485,7 @@
   <span class="md-ellipsis">
     
   
-    Clase 1 — Criptografía Clásica
+    Clase 2 — Algoritmos Clásicos y Flujos
   
 
     
@@ -475,7 +503,7 @@
   <span class="md-ellipsis">
     
   
-    Clase 1 — Criptografía Clásica
+    Clase 2 — Algoritmos Clásicos y Flujos
   
 
     
@@ -501,33 +529,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-la-criptografia-y-por-que-existe" class="md-nav__link">
+  <a href="#cifrado-por-flujos-vs-cifrado-por-bloques" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Qué es la criptografía y por qué existe?
+        Cifrado por flujos vs Cifrado por bloques
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#historia-una-narrativa-de-ataques-y-respuestas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Historia: una narrativa de ataques y respuestas
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Historia: una narrativa de ataques y respuestas">
+    <nav class="md-nav" aria-label="Cifrado por flujos vs Cifrado por bloques">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#seguridad-por-oscuridad" class="md-nav__link">
+  <a href="#cifrado-por-flujos-esta-clase" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Seguridad por oscuridad
+        Cifrado por flujos (esta clase)
       
     </span>
   </a>
@@ -535,10 +552,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#los-primeros-cifrados" class="md-nav__link">
+  <a href="#cifrado-por-bloques-clase-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Los primeros cifrados
+        Cifrado por bloques (Clase 3)
       
     </span>
   </a>
@@ -546,10 +563,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cesar-y-la-sustitucion-simple" class="md-nav__link">
+  <a href="#stream-ciphers-definicion-formal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        César y la sustitución simple
+        Stream Ciphers - Definición formal
       
     </span>
   </a>
@@ -557,43 +574,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#al-kindi-y-el-analisis-de-frecuencia-siglo-ix" class="md-nav__link">
+  <a href="#xor-la-operacion-base" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Al-Kindi y el análisis de frecuencia (siglo IX)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vigenere-la-respuesta-al-analisis-de-frecuencia-siglo-xvi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vigenère — La respuesta al análisis de frecuencia (siglo XVI)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#babbage-y-kasiski-lo-rompen-siglo-xix" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Babbage y Kasiski lo rompen (siglo XIX)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enigma-el-salto-electromecanico-segunda-guerra-mundial" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enigma — El salto electromecánico (Segunda Guerra Mundial)
+        XOR — la operación base
       
     </span>
   </a>
@@ -606,66 +590,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#la-triada-cia" class="md-nav__link">
+  <a href="#aleatoriedad-trng-prng-y-csprng" class="md-nav__link">
     <span class="md-ellipsis">
       
-        La Tríada CIA
+        Aleatoriedad: TRNG, PRNG y CSPRNG
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#el-principio-de-kerckhoffs-1883" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        El Principio de Kerckhoffs (1883)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criptoanalisis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Criptoanálisis
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aritmetica-modular" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Aritmética Modular
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cifrados-clasicos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cifrados Clásicos
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cifrados Clásicos">
+    <nav class="md-nav" aria-label="Aleatoriedad: TRNG, PRNG y CSPRNG">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sustitucion-y-permutacion" class="md-nav__link">
+  <a href="#trng-true-random-number-generator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sustitución y permutación
+        TRNG — True Random Number Generator
       
     </span>
   </a>
@@ -673,10 +613,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cifrados-monoalfabeticos-y-polialfabeticos" class="md-nav__link">
+  <a href="#prng-pseudo-random-number-generator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cifrados monoalfabéticos y polialfabéticos
+        PRNG — Pseudo-Random Number Generator
       
     </span>
   </a>
@@ -684,55 +624,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#definiciones-formales" class="md-nav__link">
+  <a href="#csprng-cryptographically-secure-prng" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Definiciones formales
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Definiciones formales">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#caesar" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caesar
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#affine" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Affine
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vigenere" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vigenère
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#playfair" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Playfair
+        CSPRNG — Cryptographically Secure PRNG
       
     </span>
   </a>
@@ -743,6 +638,51 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#one-time-pad-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-Time Pad (OTP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="One-Time Pad (OTP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion-formal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición formal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-tres-condiciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las tres condiciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-es-impractico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué es impráctico
+      
+    </span>
+  </a>
+  
+</li>
         
       </ul>
     </nav>
@@ -750,13 +690,130 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mapa-de-algoritmos" class="md-nav__link">
+  <a href="#seguridad-perfecta-vs-seguridad-computacional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mapa de algoritmos
+        Seguridad Perfecta vs Seguridad Computacional
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Seguridad Perfecta vs Seguridad Computacional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-perfecta-shannon-1949" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad perfecta (Shannon, 1949)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-computacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad computacional
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cifrados-por-flujos-modernos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cifrados por Flujos Modernos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cifrados-por-flujos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cifrados por flujos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cifrados por flujos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rc4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RC4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salsa20-y-chacha20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salsa20 y ChaCha20
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ataques-a-stream-ciphers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ataques a Stream Ciphers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ataques a Stream Ciphers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-time-pad-reutilizacion-de-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two-time pad — reutilización de clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bit-flipping-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bit-flipping attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -786,34 +843,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../clase-02-cifrado-flujos/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Clase 2 — Algoritmos Clásicos y Flujos
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1283,33 +1312,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-la-criptografia-y-por-que-existe" class="md-nav__link">
+  <a href="#cifrado-por-flujos-vs-cifrado-por-bloques" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Qué es la criptografía y por qué existe?
+        Cifrado por flujos vs Cifrado por bloques
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#historia-una-narrativa-de-ataques-y-respuestas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Historia: una narrativa de ataques y respuestas
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Historia: una narrativa de ataques y respuestas">
+    <nav class="md-nav" aria-label="Cifrado por flujos vs Cifrado por bloques">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#seguridad-por-oscuridad" class="md-nav__link">
+  <a href="#cifrado-por-flujos-esta-clase" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Seguridad por oscuridad
+        Cifrado por flujos (esta clase)
       
     </span>
   </a>
@@ -1317,10 +1335,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#los-primeros-cifrados" class="md-nav__link">
+  <a href="#cifrado-por-bloques-clase-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Los primeros cifrados
+        Cifrado por bloques (Clase 3)
       
     </span>
   </a>
@@ -1328,10 +1346,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cesar-y-la-sustitucion-simple" class="md-nav__link">
+  <a href="#stream-ciphers-definicion-formal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        César y la sustitución simple
+        Stream Ciphers - Definición formal
       
     </span>
   </a>
@@ -1339,43 +1357,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#al-kindi-y-el-analisis-de-frecuencia-siglo-ix" class="md-nav__link">
+  <a href="#xor-la-operacion-base" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Al-Kindi y el análisis de frecuencia (siglo IX)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vigenere-la-respuesta-al-analisis-de-frecuencia-siglo-xvi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vigenère — La respuesta al análisis de frecuencia (siglo XVI)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#babbage-y-kasiski-lo-rompen-siglo-xix" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Babbage y Kasiski lo rompen (siglo XIX)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enigma-el-salto-electromecanico-segunda-guerra-mundial" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enigma — El salto electromecánico (Segunda Guerra Mundial)
+        XOR — la operación base
       
     </span>
   </a>
@@ -1388,66 +1373,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#la-triada-cia" class="md-nav__link">
+  <a href="#aleatoriedad-trng-prng-y-csprng" class="md-nav__link">
     <span class="md-ellipsis">
       
-        La Tríada CIA
+        Aleatoriedad: TRNG, PRNG y CSPRNG
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#el-principio-de-kerckhoffs-1883" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        El Principio de Kerckhoffs (1883)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criptoanalisis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Criptoanálisis
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aritmetica-modular" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Aritmética Modular
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cifrados-clasicos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cifrados Clásicos
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cifrados Clásicos">
+    <nav class="md-nav" aria-label="Aleatoriedad: TRNG, PRNG y CSPRNG">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sustitucion-y-permutacion" class="md-nav__link">
+  <a href="#trng-true-random-number-generator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sustitución y permutación
+        TRNG — True Random Number Generator
       
     </span>
   </a>
@@ -1455,10 +1396,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cifrados-monoalfabeticos-y-polialfabeticos" class="md-nav__link">
+  <a href="#prng-pseudo-random-number-generator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cifrados monoalfabéticos y polialfabéticos
+        PRNG — Pseudo-Random Number Generator
       
     </span>
   </a>
@@ -1466,55 +1407,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#definiciones-formales" class="md-nav__link">
+  <a href="#csprng-cryptographically-secure-prng" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Definiciones formales
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Definiciones formales">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#caesar" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caesar
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#affine" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Affine
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vigenere" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vigenère
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#playfair" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Playfair
+        CSPRNG — Cryptographically Secure PRNG
       
     </span>
   </a>
@@ -1525,6 +1421,51 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#one-time-pad-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-Time Pad (OTP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="One-Time Pad (OTP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion-formal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición formal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-tres-condiciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las tres condiciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-es-impractico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué es impráctico
+      
+    </span>
+  </a>
+  
+</li>
         
       </ul>
     </nav>
@@ -1532,13 +1473,130 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mapa-de-algoritmos" class="md-nav__link">
+  <a href="#seguridad-perfecta-vs-seguridad-computacional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mapa de algoritmos
+        Seguridad Perfecta vs Seguridad Computacional
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Seguridad Perfecta vs Seguridad Computacional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-perfecta-shannon-1949" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad perfecta (Shannon, 1949)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-computacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad computacional
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cifrados-por-flujos-modernos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cifrados por Flujos Modernos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cifrados-por-flujos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cifrados por flujos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cifrados por flujos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rc4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RC4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salsa20-y-chacha20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salsa20 y ChaCha20
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ataques-a-stream-ciphers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ataques a Stream Ciphers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ataques a Stream Ciphers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-time-pad-reutilizacion-de-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two-time pad — reutilización de clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bit-flipping-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bit-flipping attack
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1584,364 +1642,397 @@
   
 
 
-<h1 id="clase-1-criptografia-clasica">Clase 1 — Criptografía Clásica</h1>
+<h1 id="clase-2-cifrado-simetrico-por-flujos">Clase 2 — Cifrado Simétrico por Flujos</h1>
 <blockquote>
-<p><strong>Módulo:</strong> Criptografía</p>
+<p><strong>Módulo:</strong> Criptografía  </p>
 </blockquote>
 <hr />
-<h2 id="que-es-la-criptografia-y-por-que-existe">¿Qué es la criptografía y por qué existe?</h2>
-<p>La <strong>criptografía</strong> es una rama de la matemática que lidia con la transformación de la información para que solo pueda ser leída por quienes están autorizados. Su origen es tan antiguo como la necesidad humana de comunicarse en secreto — desde mensajes militares en la Antigua Roma hasta las comunicaciones cifradas que usamos hoy cada vez que abrimos un navegador.</p>
-<p>La <strong>ciberseguridad</strong> es el campo más amplio que se ocupa de proteger sistemas, redes y datos. La criptografía es una de sus herramientas fundamentales — pero no la única.</p>
-<p>Se cruzan cuando necesitamos garantizar que una comunicación sea segura: que nadie la intercepte, que nadie la modifique, y que sepamos con certeza quién la envió.</p>
-<hr />
-<h2 id="historia-una-narrativa-de-ataques-y-respuestas">Historia: una narrativa de ataques y respuestas</h2>
-<p>La historia de la criptografía no es una línea de tiempo de inventos — es una historia de <strong>ataques que rompen sistemas</strong> y <strong>cifrados nuevos que surgen</strong>.</p>
-<h3 id="seguridad-por-oscuridad">Seguridad por oscuridad</h3>
-<p>Los primeros sistemas asumían que su seguridad dependía de que el método fuera desconocido. El problema es evidente: cuando el método se descubre, todo el sistema colapsa.</p>
-<h3 id="los-primeros-cifrados">Los primeros cifrados</h3>
-<p>La necesidad de transmitir mensajes secretos se remonta a la época Antigua.<br />
-Como ejemplo:<br />
-- jeroglíficos no estándar tallados en la pared de una tumba del Antiguo Egipto (1900 a. C.)<br />
-- tablillas de arcilla encontradas en Mesopotamia contenían escritura cifrada que se cree que son recetas secretas para esmaltes cerámicos (1500 a. C.)<br />
-- antiguos espartanos utilizaron un primer sistema de cifrado desordenando las letras en sus comunicaciones militares (siglo V a. C.)  </p>
+<h2 id="cifrado-por-flujos-vs-cifrado-por-bloques">Cifrado por flujos vs Cifrado por bloques</h2>
+<h3 id="cifrado-por-flujos-esta-clase">Cifrado por flujos (esta clase)</h3>
+<p>Los cifrados clásicos de la Clase 1 operaban sobre letras individuales o pares de letras.  </p>
+<p>Un <strong>stream cipher</strong> opera sobre el mensaje bit a bit (o byte a byte). Se cifra cada unidad con un valor, y se lanza a la línea, se "streamea", se transmite.  Hay cifrados por flujo sincrónicos (que sólo dependen del <em>keystream</em>) y asincrónicos (que dependen del <em>keystream</em> y del <em>ciphertext</em>).  </p>
+<p>Los cifrados por flujo modernos nacieron inicialmente de las comunicaciones de los celulares alrededor de 1970. Son populares porque son muy rápidos, robustos y eficientes. Además, funcionan en dispositivos con recursos limitados o sin soporte para otros cifrados más pesados.  </p>
+<p>La idea central: generar una secuencia de bits pseudo-aleatoria — el <strong>keystream</strong> — y combinarla con el plaintext mediante <strong>XOR</strong>:  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>E(x) = x ⊕ keystream
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>D(y) = y ⊕ keystream
+</code></pre></div>
+<p>El receptor, con la misma clave, genera el mismo keystream y revierte la operación. La seguridad depende de que el <em>keystream sea indistinguible de aleatoriedad real</em>.</p>
 <div align="center">
-  <img src="../images/Permutaciones.jpg" alt="Escítala espartana" width="400">
+  <img src="../images/StreamCipher.jpg" alt="Stream Cipher" width="400">
 </div>
 
-<h3 id="cesar-y-la-sustitucion-simple">César y la sustitución simple</h3>
-<p>El cifrado César desplaza cada letra del alfabeto un número fijo de posiciones. Podemos, entonces, definir al cifrado César de la siguiente <em>manera elegante</em>:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>E(x) = (x + k) mod 26 
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>D(x) = (x - k) mod 26
+<h3 id="cifrado-por-bloques-clase-3">Cifrado por bloques (<a href="../clase-03-cifrado-bloques/">Clase 3</a>)</h3>
+<p>Los cifrados por bloques cifran bloques enteros de bits de texto plano al mismo tiempo con la misma key.  </p>
+<p>Esto significa que el cifrado de un bit del texto plano en un bloque específico depende de todos los bits del mismo bloque.  </p>
+<div align="center">
+  <img src="../images/BlockCipher.jpg" alt="Block Cipher" width="400">
+</div>
+
+<p>Algunos puntos para destacar:<br />
+- En la práctica, para las comunicaciones por Internet, los cifrados por bloques son más populares que los cifrados por flujos.<br />
+- Los cifrados por flujos suelen ser más pequeños y rápidos, por lo que suele usarse en dispositivos con pocos recursos, como celulares y sistemas embebidos.<br />
+- Se suele asumir que los cifrados por flujos son más <em>eficientes</em>, refiriéndose a que están optimizados para necesitar menos ciclos del procesador (o menos gates en caso de que estén optimizados para hardware) para cifrar la misma data. Igualmente, en la actualidad, los cifrados modernos por bloques son también muy eficientes, tanto en hardware como en software.  </p>
+<p>Entonces... ¿por qué se siguen eligiendo los cifrados por flujos, si hay cifrados por bloques tan optimizados?</p>
+<hr />
+<h3 id="stream-ciphers-definicion-formal">Stream Ciphers - Definición formal</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>E(xᵢ) = xᵢ + Kᵢ mod 2  
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>D(yᵢ) = yᵢ + Kᵢ mod 2  
 </code></pre></div>
-Siendo... 0=A, 1=B, 2=C, ... 24=Y, 25=Z → Total = 26 elementos.  </p>
-<p>Ejemplo, con <code>k = 3</code>: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>A → D - Para A=0 → (0 + 3) mod 26 = 3 → D
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>B → E - Para B=1 → (1 + 3) mod 26 = 4 → E
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>C → F - Para C=2 → (2 + 3) mod 26 = 5 → F
+<p>E(xᵢ) → <strong>Cifrado (o Encryption):</strong> Se toma el primer bit del texto plano y se le suma un valor que va a ser parte de la clave o <em>key stream</em>.<br />
+D(yᵢ) → <strong>Descifrado (o Decryption):</strong> Se toma el bit cifrado y se le suma un valor que va a ser parte de la clave o <em>key stream</em>.  </p>
+<p>AMBOS trabajando en <strong>mod 2</strong>.  </p>
+<p>A K<sub>i</sub> le vamos a llamar <em>key bit</em>.</p>
+<p>¿Por qué tienen el cifrado y el descrifrado una suma en su definición?  </p>
+<hr />
+<h3 id="xor-la-operacion-base">XOR — la operación base</h3>
+<p>XOR (suma módulo 2) tiene una propiedad clave para criptografía: es su propia inversa.  </p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>k</th>
+<th>x ⊕ k</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Cifrado:    E(x) = x ⊕ k
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Descifrado: D(y) = y ⊕ k  (la misma operación)
 </code></pre></div>
-<p>Entonces, si ciframos:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Texto:   A T A C A R
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Clave:   D W D F D U
-</code></pre></div></p>
-<p>Simple, pero rompible: sólo hay 25 claves posibles. Un atacante puede probarlas todas en minutos.  </p>
-<p>El <strong>mod 26</strong> es lo que hace que el alfabeto sea <strong>circular</strong>: cuando se llega a la <strong>Z</strong> se vuelve a empezar por la <strong>A</strong>.</p>
-<h3 id="al-kindi-y-el-analisis-de-frecuencia-siglo-ix">Al-Kindi y el análisis de frecuencia (siglo IX)</h3>
-<p>El matemático árabe Al-Kindi descubrió que en <em>cualquier idioma las letras no aparecen con la misma frecuencia</em>.<br />
-En español, las letras más comunes son <strong>E, A, O</strong>. Si en un ciphertext la letra más frecuente es X, probablemente X representa E.</p>
-<p>Esto rompe <strong>todos</strong> los cifrados de sustitución simple. No importa cuál sea la clave — el patrón de frecuencias del idioma sobrevive al cifrado.</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>One way to solve an encrypted message, if we know its language, is to find a different plaintext ofthe same language long enough to fill one sheet or so,
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a> and then we count the occurrences of each letter. We call the most frequendy occurring letter the &quot;first,&quot; the next most occurring letter the &quot;second,&quot; 
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a> the following most occurring letter the &quot;third,&quot; and so on. until we account for all the different letters in the plaintext sample. Then we look at the 
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a> ciphertext we want to solve and we also classify its symbols. We find the most occurring symbol and change it to the form of the &quot;first&quot; letter of the 
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a> plaintext sample, the next most common symbol is changed to the form of the &quot;second&quot; letter, and the following most common symbol is changed to the form 
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a> of the &quot;third&quot; letter, and so on, until we account for all symbols ofthe cryptogram we want to solve.
-</code></pre></div>
-<em>Fragmento de </em><em>A Manuscript on Deciphering Cryptographic Messages</em><em> de Al-Kindi</em></p>
-<h3 id="vigenere-la-respuesta-al-analisis-de-frecuencia-siglo-xvi">Vigenère — La respuesta al análisis de frecuencia (siglo XVI)</h3>
-<p>Vigenère usa una clave que se repite a lo largo del mensaje. Cada letra se cifra con un desplazamiento diferente según su posición:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Texto:   A T A C A R A L A M A N E C E R 
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Clave:   L I M O N L I M O N L I M O N L
-</code></pre></div>
-<p>La misma letra puede cifrarse de formas distintas. </p>
-<p>El análisis de frecuencia directo ya no funciona. Se lo llamó <em>le chiffre indéchiffrable</em> — duró casi 300 años.</p>
-<h3 id="babbage-y-kasiski-lo-rompen-siglo-xix">Babbage y Kasiski lo rompen (siglo XIX)</h3>
-<p>El ataque de Kasiski explota que la clave se <strong>repite</strong>.<br />
-Si la clave es <strong>LIMON</strong> (longitud 5) y el mensaje es largo, la clave se va a repetir: LIMONLIMONLIMONLIM...<br />
-Cada letra en las posiciones 1,6,11,16... se cifra con la misma letra L. Cada letra en las posiciones 2,7,12,17... con la letra I.  </p>
-<p>Entonces, si la misma secuencia de letras en el texto plano cae alineada con la misma parte de la clave en dos lugares distintos, van a producir  <strong>la misma secuencia de letras en el texto cifrado</strong>. Y la distancia entre esas dos apariciones va a ser múltiplo de la longitud de la clave.</p>
-<p>En pasos:<br />
-1. Buscar secuencias repetidas en el ciphertext.<br />
-2. Calcular las distancias entre repeticiones. Ej, primera apacición: posición 10. Segunda aparición, posición 40. Distancia: 40 - 10 = 30<br />
-3. Factorizar las distancias: 30 = 2 * 3 * 5. La longitud de la clave tiene que ser un divisor de esa distancia (o un producto de ellos).<br />
-4. Encontrar el factor más frecuente. Con varias distancias factorizadas, se busca el que más aparece.  </p>
-<p>Ej,<br />
-Distancia 1: 30 → 2,3,5<br />
-Distancia 2: 20 → 2,4,5<br />
-Distancia 3: 15 → 3, 5<br />
-El 5 aparece en las 3 distancias → Longitud probable: 5  </p>
+<p>Si <code>K</code> (el <em>key stream</em>) es verdaderamente aleatoria y de la misma longitud que el texto plano (<code>X</code>), esto es exactamente el One-Time Pad.</p>
+<p>Demo:  </p>
+<p>D(yᵢ) = yᵢ + Kᵢ mod 2 = (xᵢ + Kᵢ mod 2) + Kᵢ mod 2 = xᵢ + 2 Kᵢ mod 2<br />
+Pero... 2 Kᵢ mod 2 = 0 → D(yᵢ) = xᵢ mod 2 (es decir, el texto plano!)  </p>
+<blockquote>
+<p>Por lo tanto, concluimos que el cifrado se calcula de la misma manera que el descifrado.  </p>
+</blockquote>
+<p><em>Nota: Se puede poner un <code>-</code> en el descifrado, y también se va a obtener el texto plano.</em>  </p>
+<p>Ejemplo:<br />
+Suponiendo que quiero cifrar x<sub>1</sub> = 0.<br />
+Tengo que generar entonces mi Sᵢ que me permita hacer esta operación:  </p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>k</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>Dividir el texto cifrado en columnas. Con la longitud 5 supuesta, se divide el texto cifrado en columnas de longitud 5. Entonces, cada columna fue cifrada <strong>con la misma letra de la clave</strong> (cada columna es un cifrado Caesar independiente).  </li>
-<li>Aplicar análisis de frecuencia en cada columna. Como cada columna es un cifrado Caesar independiente, sabemos que tiene la distribución de frecuencias del idioma.  </li>
-<li>En base al análisis de frecuencia, reconstruir la clave y descifrar.  </li>
+<li>Si cifro x<sub>1</sub> = 0 y el bit key = 0, el texto cifrado es = 0.  </li>
+<li>Si cifro x<sub>1</sub> = 0 y el bit key = 1, el texto cifrado es = 1.  </li>
 </ol>
+<p>El 0 puede ser cifrado como 0 o como 1, con el 50/50. Lo mismo pasa si el bit plano es 1.  </p>
 <blockquote>
-<p>Conclusión: Este ataque funciona porque la repetición de la clave introduce repetición en el texto cifrado (y ahí ya se puede aplicar análisis estadístico).</p>
+<p><em>Cada bit plano puede computarse con 0 o con 1.</em></p>
 </blockquote>
-<p>Cuándo falla el ataque?<br />
-- Texto muy corto (pocas repeticiones, no hay suficientes datos)<br />
-- La clave es tan larga como el mensaje (se convierte en <em>One time Pad</em> (<a href="../clase-02-cifrado-flujos/">Clase 2</a>))  </p>
-<h3 id="enigma-el-salto-electromecanico-segunda-guerra-mundial">Enigma — El salto electromecánico (Segunda Guerra Mundial)</h3>
-<p>Enigma era una máquina electromecánica de cifrado usada por el ejército alemán durante la Segunda Guerra Mundial. Cada vez que se presionaba una tecla, la máquina transformaba la letra y encendía una lámpara con la letra cifrada.</p>
-<p>Tenía 158 quintillones de configuraciones posibles. Cada día, los operadores recibían un libro de códigos donde se especificaba la configuración de la máquina: qué rotores usar, en qué orden y cómo configurar el plugboard.</p>
-<p>Por qué funcionaba?<br />
-La misma letra cifrada dos veces consecutivas producía distintos resultados. El análisis de frecuencias no funcionaba. Estadísticamente se parecía a un <em>OTP</em>.</p>
-<p>Alan Turing y el equipo de Bletchley Park no atacaron el cifrado directamente — <strong>explotaron los errores humanos</strong>:  </p>
+<p>¿Por qué XOR y no otra operación booleana?<br />
+1. Es la única que al aplicarla dos veces recuperás el mensaje original.<br />
+2. El output es perfectamente balanceado, siendo exactamente 50% de probabilidades para 0 o 1 cualquiera sea el input.<br />
+3. OR, AND y NAND son irreversibles porque causan pérdida de información.  </p>
+<p>AND          <br />
+| x | k | y |<br />
+|---|---|---|<br />
+| 0 | 0 | 0 |<br />
+| 0 | 1 | 0 |<br />
+| 1 | 0 | 0 |<br />
+| 1 | 1 | 1 |  </p>
+<p>OR<br />
+| x | k | y |<br />
+|---|---|---|<br />
+| 0 | 0 | 0 |<br />
+| 0 | 1 | 1 |<br />
+| 1 | 0 | 1 |<br />
+| 1 | 1 | 1 | </p>
+<p>NAND<br />
+| x | k | y |<br />
+|---|---|---|<br />
+| 0 | 0 | 1 |<br />
+| 0 | 1 | 1 |<br />
+| 1 | 0 | 1 |<br />
+| 1 | 1 | 0 |  </p>
+<p>Por ejemplo, para AND la info se pierde si algún bit es 0 → 0 AND A = 0 → No tengo manera de saber si el bit era 0 o 1.<br />
+Con OR también... A OR 1 = 1.  </p>
+<hr />
+<h2 id="aleatoriedad-trng-prng-y-csprng">Aleatoriedad: TRNG, PRNG y CSPRNG</h2>
+<h3 id="trng-true-random-number-generator">TRNG — True Random Number Generator</h3>
+<p>Genera aleatoriedad a partir de fenómenos físicos impredecibles: ruido térmico, movimiento del mouse, timing de interrupciones del sistema operativo, lanzar una monera.</p>
 <ul>
-<li>Los operadores siempre empezaban los mensajes con frases predecibles. Conocer fragmentos del texto plano de antemano reducía enormemente el espacio de búsqueda.  </li>
-<li>Enigma nunca cifraba una letra como sí misma. Si el texto plano era <em>AAAA</em>, el texto cifrado no podía contener ninguna <em>A</em>. Eso descartaba millones de configuraciones.  </li>
-<li>Tenía un error crítico: la seguridad del sistema dependía del secreto de la configuración y no sólo de la clave. Contradecía el principio de Kerckhoffs.  </li>
+<li>No es reproducible — dos invocaciones con las mismas condiciones dan resultados distintos  </li>
+<li>Es la única fuente de aleatoriedad <em>real</em>  </li>
+<li>Es lento y costoso — no se puede usar para generar keystreams largos  </li>
+<li>Se usa para generar <strong>semillas</strong> (seeds) para los generadores siguientes  </li>
 </ul>
-<p><strong>Conclusión:</strong> Un sistema criptográfico lo rompen la matemática y las personas.</p>
-<p><strong>Links al funcionamiento de Enigma</strong></p>
-<p><a href="https://www.youtube.com/watch?v=G2_Q9FoD-oQ">Máquina Enigma</a><br />
-<a href="https://www.youtube.com/watch?v=V4V2bpZlqx8">Fallas en Enigma</a>  </p>
-<hr />
-<h2 id="la-triada-cia">La Tríada CIA</h2>
-<p>Los tres objetivos fundamentales de la seguridad de la información:  </p>
-<table>
-<thead>
-<tr>
-<th>Objetivo</th>
-<th>Pregunta</th>
-<th>¿Qué lo garantiza?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Confidencialidad</strong></td>
-<td>¿Solo pueden acceder a la información quienes están autorizados?</td>
-<td>Cifrado</td>
-</tr>
-<tr>
-<td><strong>Integridad</strong></td>
-<td>¿La información no fue alterada en el camino?</td>
-<td>Hash / MAC</td>
-</tr>
-<tr>
-<td><strong>Disponibilidad</strong></td>
-<td>¿La información está accesible cuando se la necesita?</td>
-<td>Backups / DDoS protection</td>
-</tr>
-</tbody>
-</table>
-<p>Son problemas <strong>independientes</strong>. Un sistema puede tener confidencialidad sin integridad, o integridad sin confidencialidad. En la práctica, casi siempre se necesitan los tres.</p>
-<hr />
-<h2 id="el-principio-de-kerckhoffs-1883">El Principio de Kerckhoffs (1883)</h2>
-<blockquote>
-<p><em>La seguridad de un sistema debe depender únicamente del secreto de la clave, nunca del secreto del algoritmo.</em></p>
-</blockquote>
-<p>En la práctica:<br />
-- Los algoritmos se publican y los auditan miles de expertos<br />
-- Los ataques conocidos se documentan y estudian públicamente<br />
-- Una clave secreta es mucho más manejable que un algoritmo secreto  </p>
-<p>Cualquier sistema que depende de "nadie sabe cómo funciona" ya está comprometido antes de empezar. El análisis de frecuencia de Al-Kindi demostró esto en el siglo IX.</p>
-<hr />
-<h2 id="criptoanalisis">Criptoanálisis</h2>
-<p>Definimos lo modelos de ataques basándonos en la cantidad de información que maneja el atacante.</p>
-<p>Se presuponse que el atacante <strong>sabe qué algoritmo se está utilizando en el cifrado</strong> y el <strong>peor caso:</strong> tiene tiempo y recursos infinitos.<br />
-El problema más difícil se presenta cuando lo único que tiene disponible es el <em>texto cifrado</em>.  </p>
-<table>
-<thead>
-<tr>
-<th>Modelo</th>
-<th>Qué tiene el atacante</th>
-<th>Ejemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Ciphertext-only</strong></td>
-<td>Solo mensajes cifrados</td>
-<td>Análisis de frecuencia sobre Vigenère</td>
-</tr>
-<tr>
-<td><strong>Known-plaintext</strong></td>
-<td>Texto cifrado + Pares de texto plano-cifrado</td>
-<td>Turing con Enigma</td>
-</tr>
-<tr>
-<td><strong>Chosen-plaintext</strong></td>
-<td>Texto cifrado + Puede elegir qué cifrar y ver el resultado (cifrado)</td>
-<td>Ataques modernos a block ciphers</td>
-</tr>
-<tr>
-<td><strong>Chosen-ciphertext</strong></td>
-<td>Texto cirado + Puede elegir qué descifrar y ver el resultado (plano)</td>
-<td>Ataques a RSA mal implementado (sin padding)</td>
-</tr>
-</tbody>
-</table>
-<p>Estos modelos van a reaparecer en los algoritmo que veamos durante toda la materia.  </p>
-<p>Como se verá en la siguiente clase, con la excepción de <em>One time pad</em>, no hay un algoritmo de cifrado que sea <em>incondicionalmente seguro</em>.  </p>
-<p>Entonces, vamos a decir que un esquema de cifrado es <em>computacionalmente seguro</em> si cumple alguno (o ambos) de estos dos criterios:  </p>
-<blockquote>
-<p>El costo de romper el cifrado excede el valor de la información cifrada.<br />
-El tiempo requerido para romper el cifrado excede el tiempo de la vida de utilidad de la información cifrada.  </p>
-</blockquote>
-<p><em>Nota: muchos de estos conceptos vamos a retomarlos en la <a href="../clase-02-cifrado-flujos/">Clase 2</a></em></p>
-<hr />
-<h2 id="aritmetica-modular">Aritmética Modular</h2>
-<p>La operación <code>a mod n</code> devuelve el resto de dividir <code>a</code> por <code>n</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>17 mod 5  =  2
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>-3 mod 26 = 23   (no -3)
-</code></pre></div>
-<p>Los cifrados trabajan en espacios finitos. El <em>módulo</em> se usará para limitar los elementos involucrados (claves, textos planos y textos cifrados) dentro de esa cantidad finita de elementos.  </p>
-<p>En el caso de los cifrados clásicos, el alfabeto latino tiene 26 letras — todas las operaciones de cifrado clásico viven en <strong>Z<sub>26</sub></strong>.
-Los cifrados que trabajan con bits, harán sus cálculos dentro de <strong>Z<sub>2</sub></strong>.  </p>
-<p>Operaciones relevantes:  </p>
-<table>
-<thead>
-<tr>
-<th>Operación</th>
-<th>Ejemplo en Z<sub>26</sub></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Suma</td>
-<td>(20 + 9) mod 26 = 3</td>
-</tr>
-<tr>
-<td>Resta</td>
-<td>(3 − 9) mod 26 = 20</td>
-</tr>
-<tr>
-<td>Multiplicación</td>
-<td>(7 × 3) mod 26 = 21</td>
-</tr>
-<tr>
-<td>Inverso multiplicativo</td>
-<td>7<sup>-1</sup> mod 26 = 15, porque 7 × 15 mod 26 = 1</td>
-</tr>
-</tbody>
-</table>
-<p>En aritmética normal, 7<sup>-1</sup> = 1/7 = 0,1428...
-En aritmética modular, la división no existe. El inverso es un entero.  </p>
-<p>El inverso de <strong>a</strong> en Z<sub>m</sub> es el número <strong>b</strong> tal que <strong>a * b ≡ 1 (mod m)</strong>.  </p>
-<blockquote>
-<p>El inverso multiplicativo existe sí y sólo sí cuando <code>mcd(a, n) = 1</code>, es decir, son <strong>son coprimos</strong>, el único divisor común que tienen entre ellos es el <strong>1</strong>.  </p>
-</blockquote>
-<p>Ej: Inverso de 7 en Z<sub>26</sub> :  </p>
-<p>Buscamos b tal que:  7 * b ≡ 1 (mod 26). </p>
-<p>Probando:<br />
-  7 * 1  = 7    →  7 mod 26 = 7   (no)<br />
-  7 * 2  = 14   →  14 mod 26 = 14 (no)<br />
-  7 * 3  = 21   →  21 mod 26 = 21 (no)<br />
-  7 * 4  = 28   →  28 mod 26 = 2  (no)<br />
-  ...<br />
-  7 * 15 = 105  →  105 mod 26 = 1 (SI!)  </p>
-<p>Por lo tanto: 7<sup>-1</sup> mod 26 = 15  </p>
-<p>Verificamos: 105 (mod 26) = 4 * 26 +1 = 104 + 1 = 105  </p>
-<h2 id="cifrados-clasicos">Cifrados Clásicos</h2>
-<h3 id="sustitucion-y-permutacion">Sustitución y permutación</h3>
-<p>Dos operaciones base de todo cifrado clásico:  </p>
+<h3 id="prng-pseudo-random-number-generator">PRNG — Pseudo-Random Number Generator</h3>
+<p><em>Pseudo</em> indica que pretende ser aleatorio pero no lo es realmente.  </p>
+<p>Se toma una semilla y se produce una secuencia larga que <em>parece</em> aleatoria. Pero es determinístico — la misma semilla siempre produce la misma secuencia.  </p>
 <ul>
-<li><strong>Sustitución:</strong> reemplazar un símbolo por otro.  </li>
-<li><strong>Permutación / transposición:</strong> reorganizar los símbolos sin cambiarlos.  </li>
+<li>Rápido y eficiente  </li>
+<li>Pasa tests estadísticos estándar (distribución uniforme, sin patrones obvios)  </li>
+<li><strong>No apto para criptografía:</strong> un atacante que conoce el algoritmo y observa parte de la salida puede predecir el resto  </li>
 </ul>
-<blockquote>
-<p>Los cifrados modernos combinan ambas en múltiples rondas.  </p>
-</blockquote>
-<h3 id="cifrados-monoalfabeticos-y-polialfabeticos">Cifrados monoalfabéticos y polialfabéticos</h3>
-<ul>
-<li>
-<p><strong>Monoalfabéticos:</strong> los cifrados monoalfabéticos usan un solo alfabeto (mapeo del texto plano al texto cifrado) para cifrar todo el mensaje.
-Ejemplos de estos son el cifrado Caesar y Affine.  </p>
-</li>
-<li>
-<p><strong>Polialfabéticos:</strong> los cifrados polialfabéticos utilizan <em>diferentes sustituciones monoalfabéticas</em> a medida que se avanza en el texto plano.
-El más conocido (y simple) es el Cifrado Vigenere, que usa un cifrado Caesar por cada letra del texto plano, y Playfair que es un cifrado de dígrafo (pares de letras).  </p>
-</li>
-</ul>
-<h3 id="definiciones-formales">Definiciones formales</h3>
-<h4 id="caesar">Caesar</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>E(x) = (x + k) mod 26
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>D(y) = (y − k) mod 26
-</code></pre></div>
-<p>Espacio de claves: 25. Trivialmente rompible por fuerza bruta y análisis de frecuencias.</p>
-<h4 id="affine">Affine</h4>
-<p>El espacio de las claves se agranda porque tenemos dos valores que intervienen en el cifrado: a y b. La llave, entonces, está formada por ambos valores.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>E(x) = (a * x + b) mod 26
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>D(y) = a⁻¹ * (y − b) mod 26
-</code></pre></div>
-<p>Requiere que <code>mcd(a, 26) = 1</code> para que exista el inverso. Si no, el cifrado no es biyectivo y no se puede descifrar unívocamente.</p>
-<p>Valores válidos de <code>a</code>: 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25 → 12 opciones.<br />
-Valores de <code>b</code>: 0–25 → 26 opciones.<br />
-Espacio de claves total: 12 × 26 = <strong>312 claves</strong>.  </p>
-<p>Generaliza la definición del cifrado Caesar.</p>
-<h4 id="vigenere">Vigenère</h4>
-<p>Clave de longitud <code>n</code> que se repite hasta completar el mapeo del texto plano. Cada letra del texto plano se va a mover hacia adelante tantas posiciones como indique el valor de la letra en la clave.  </p>
-<p>Cada letra se cifra con un Caesar distinto, <em>por eso se lo considera polialfabético</em>.  </p>
-<p>Cómo escribimos entonces la definición de manera elegante?<br />
-Texto plano → P = p<sub>0</sub>, p<sub>1</sub>, p<sub>2</sub>... p<sub>r-1</sub><br />
-Clave → K = k<sub>0</sub>, k<sub>1</sub>, k<sub>2</sub>... k<sub>n-1</sub> 
-donde <em>n &lt; r</em>, es decir que la cantidad de letras de la clave es <strong>menor</strong> que la cantidad de letras del texto plano.  </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>E(xᵢ) = (xᵢ + Kᵢ mod n) mod 26  
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>D(yᵢ) = (yᵢ - Kᵢ mod n) mod 26 (desplazamiento inverso)
-</code></pre></div>
-<p>Rompible con el ataque de Kasiski (deducir longitud de clave) + análisis de frecuencia por columna.  </p>
-<p>Caesar es un caso especial de Vigenère, en donde <em>n = 1</em>: la clave tiene una sola letra y ser repite durante todo el texto plano. En Vigenère <em>n &gt; 1</em>.  </p>
-<h4 id="playfair">Playfair</h4>
-<p>Usado por los británicos para cifrar mensajes del telégrafo.  </p>
-<p>Cifrado de dígrafo — opera sobre pares de letras en lugar de letras individuales. Usa una matriz 5×5 construida a partir de una clave.  </p>
-<p>Matriz:<br />
-- Se coloca la clave en la primera fila (si es más larga, se continúa hacia la segunda).<br />
-- Se completa el resto de la matriz con las letras del alfabeto que falten en orden y <em>excluyendo</em> las letras de la clave.  </p>
-<p>Reglas de cifrado:<br />
-- Mismo renglón: desplazar a la derecha<br />
-- Misma columna: desplazar hacia abajo<br />
-- Caso general: intercambio de columnas en el rectángulo formado  </p>
-<p>Para descifrar, las reglas se invierten:<br />
-- Mismo renglón: desplazar a la izquierda<br />
-- Misma columna: desplazar hacia arriba<br />
-- Caso general: intercambio de columnas en el rectángulo formado  </p>
-<p>Más resistente al análisis de frecuencia simple porque trabaja con 676 pares posibles en lugar de 26 letras.  </p>
-<p>Cómo se rompe?<br />
-- Análisis de frecuencia de digrafos.<br />
-- Fuerza bruta para adivinar la clave (sabiendo que la matriz 5x5 no tiene letras repetidas).<br />
-- <em>Known plaintext</em>: se conoce parte del texto plano y parte del cifrado, por lo que se puede intentar deduciar la clave o la matriz (la matriz es fija).<br />
-- <em>Choosen plaintext</em>: como se puede generar texto cifrado, se pueden diseñar pares de letras para obtener los pares cifrados específicos y reconstruir la clave.  </p>
-<hr />
-<h2 id="mapa-de-algoritmos">Mapa de algoritmos</h2>
-<p>Los algoritmos que vamos a ver en la materia, organizados por número de claves:  </p>
+<h3 id="csprng-cryptographically-secure-prng">CSPRNG — Cryptographically Secure PRNG</h3>
+<p>Técnicamente hablamos de los mismos generadores de la familia anterior, es decir, determinísticos y con una función recursiva que los genera. </p>
+<p>Pero se agrega una propiedad extra: su salida debe ser <strong>computacionalmente indistinguible</strong> de aleatoriedad real, incluso para un atacante que conoce el algoritmo.</p>
 <table>
 <thead>
 <tr>
-<th>Sin clave</th>
-<th>Clave única (simétrica)</th>
-<th>Dos claves (asimétrica)</th>
+<th>Propiedad</th>
+<th>TRNG</th>
+<th>PRNG</th>
+<th>CSPRNG</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Funciones Hash</td>
-<td>Algoritmos clásicos</td>
-<td>Cifrado asimétrico</td>
+<td>Verdaderamente aleatorio</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
 </tr>
 <tr>
-<td>Generadores pseudo-aleatorios</td>
-<td>Cifrado por bloques</td>
-<td>Firmas digitales</td>
+<td>Reproducible con semilla</td>
+<td>✗</td>
+<td>✓</td>
+<td>✓</td>
 </tr>
 <tr>
-<td></td>
-<td>Cifrado por flujos</td>
-<td></td>
+<td>Impredecible hacia adelante</td>
+<td>✓</td>
+<td>✗</td>
+<td>✓</td>
 </tr>
 <tr>
-<td></td>
-<td>MAC</td>
-<td></td>
+<td>Impredecible hacia atrás</td>
+<td>✓</td>
+<td>✗</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Apto para criptografía</td>
+<td>✓</td>
+<td>✗</td>
+<td>✓</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Impredecible hacia adelante:</strong> conocer los primeros <code>n</code> bits no permite calcular el bit <code>n+1</code>.<br />
+<strong>Impredecible hacia atrás:</strong> conocer el estado actual no permite reconstruir estados anteriores.</p>
+<hr />
+<h2 id="one-time-pad-otp">One-Time Pad (OTP)</h2>
+<p>El OTP es el caso límite ideal de un stream cipher: en lugar de un keystream pseudo-aleatorio, usa una clave <strong>verdaderamente aleatoria</strong> (TRNG), de la misma longitud que el mensaje, usada una sola vez.</p>
+<p>Fue inventado por Gilbert Vernam en 1917 y formalizado por Claude Shannon en 1949.  </p>
+<h3 id="definicion-formal">Definición formal</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Cifrado:    E = X ⊕ K
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Descifrado: D = Y ⊕ K
+</code></pre></div>
+<h3 id="las-tres-condiciones">Las tres condiciones</h3>
+<ol>
+<li>La clave <code>K</code> debe ser <strong>completamente aleatoria</strong> (TRNG — no PRNG)</li>
+<li>La clave debe ser <strong>tan larga como el mensaje</strong></li>
+<li>La clave debe usarse <strong>una sola vez</strong></li>
+</ol>
+<p>Si alguna de estas condiciones se viola, el sistema deja de ser perfectamente seguro.  </p>
+<p>Ej, cifrar un archivo de 400Mb → 400 Mb * 8 = 3200 Gbite = Tamaño de la key  </p>
+<h3 id="por-que-es-impractico">Por qué es impráctico</h3>
+<ul>
+<li>Requiere distribuir una clave tan larga como todos los mensajes  </li>
+<li>Distribuir esa clave de forma segura es exactamente el problema que la criptografía intenta resolver  </li>
+<li>Si ya tenés un canal seguro para la clave, podés usarlo para el mensaje directamente </li>
+<li>Una vez usada la key, hay que asegurarse de que se destruyó   </li>
+</ul>
+<hr />
+<h2 id="seguridad-perfecta-vs-seguridad-computacional">Seguridad Perfecta vs Seguridad Computacional</h2>
+<h3 id="seguridad-perfecta-shannon-1949">Seguridad perfecta (Shannon, 1949)</h3>
+<p>Un sistema criptográfico es <strong>incondicionalmente seguro</strong> si no se puede romper incluso usando una cantidad infinita de recursos de cómputo. El ciphertext no revela ninguna información sobre el plaintext.  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Pr[ P = p | C = c ] = Pr[ P = p ]
+</code></pre></div>
+<p>Leyendo la ecuación<br />
+<strong>Pr[ P = p ]</strong>  (Antes de ver el cifrado)<br />
+<em>¿Cuál es la probabilidad de que el mensaje original P sea p?</em>  </p>
+<p><strong>Pr[ P = p | C = c ]</strong> (Después de ver el cifrado)<br />
+<em>¿Cuál es la probabilidad de que el mensaje original P sea p, dado que el mensaje cifrado C es c?</em>  </p>
+<p>Observar el ciphertext no cambia la probabilidad de ningún plaintext. Son estadísticamente independientes.  </p>
+<p>OTP cumple esta condición: para cualquier ciphertext <code>Y</code>, existe exactamente una clave <code>K</code> que mapea cada plaintext posible a ese ciphertext. Un atacante no puede descartar ningún mensaje.  </p>
+<blockquote>
+<p><strong>Límite de Shannon:</strong> para que un sistema tenga seguridad perfecta, la clave debe ser al menos tan larga como el mensaje. No existe atajo matemático.  </p>
+</blockquote>
+<h3 id="seguridad-computacional">Seguridad computacional</h3>
+<p>Como la seguridad perfecta es impráctica, la criptografía moderna trabaja con un objetivo más débil pero alcanzable:  </p>
+<p>Un sistema criptográfico es <strong>computacionalmente seguro</strong> si la mejor manera conocida de romperlo requiere una cantidad de tiempo y recursos inviablemente grande (que excede lo que es físicamente posible con la tecnología actual, que excede incluso el valor de la información cifrada o su ciclo de vida).  </p>
+<p>No es seguridad absoluta — es seguridad relativa al poder computacional disponible. Un sistema que hoy es seguro puede dejar de serlo si aparece un algoritmo más eficiente o aumenta el poder de cómputo.  </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Seguridad perfecta</th>
+<th>Seguridad computacional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atacante asumido</td>
+<td>Poder ilimitado</td>
+<td>Poder polinomial</td>
+</tr>
+<tr>
+<td>Clave requerida</td>
+<td>≥ longitud del mensaje</td>
+<td>Corta (128-256 bits)</td>
+</tr>
+<tr>
+<td>Base matemática</td>
+<td>Teoría de la información</td>
+<td>Teoría de la complejidad</td>
+</tr>
+<tr>
+<td>Ejemplo</td>
+<td>OTP</td>
+<td>Stream ciphers, AES, RSA</td>
+</tr>
+<tr>
+<td>Practicidad</td>
+<td>✗</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cifrados-por-flujos-modernos">Cifrados por Flujos Modernos</h2>
+<p>Un stream cipher usa un CSPRNG para generar el keystream a partir de una clave corta:  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Keystream = CSPRNG(K, IV)
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>E = X ⊕ Keystream
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>D = Y ⊕ Keystream
+</code></pre></div>
+<p>Donde:
+- <code>K</code> = clave secreta (128 o 256 bits), semilla aleatoria obtenida de fuentes impredecibles (TRNG)<br />
+- <code>IV</code> = initialization vector — valor público, único por mensaje, evita que dos mensajes con la misma clave generen el mismo keystream  </p>
+<p>Entonces... Mantienen un estado interno que van actualizando de manera <em>no lineal</em> para que el atacante no pueda predecir la secuencia incluso sabiendo la salidas que ya se generaron.  </p>
+<h2 id="cifrados-por-flujos">Cifrados por flujos</h2>
+<h3 id="rc4">RC4</h3>
+<p>Diseñado por Ron Rivest en 1987. Fue el stream cipher más usado del mundo — SSL, WEP, TLS 1.0.  </p>
+<p>Hoy está <strong>roto y deprecado</strong>:<br />
+- Los primeros bytes del keystream tienen sesgos estadísticos detectables<br />
+- Vulnerable a ataques prácticos si se reutiliza la clave<br />
+- RFC 7465 (2015) prohíbe su uso en TLS  </p>
+<h3 id="salsa20-y-chacha20">Salsa20 y ChaCha20</h3>
+<p>Diseñados por Daniel Bernstein. Salsa20 (2005) es la familia base; ChaCha20 (2008) es una variante con mejor difusión en cada ronda.  </p>
+<p>ChaCha20 es el stream cipher moderno de referencia — usado en TLS 1.3, QUIC, WireGuard y SSH.  </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>RC4</th>
+<th>ChaCha20</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Año</td>
+<td>1987</td>
+<td>2008</td>
+</tr>
+<tr>
+<td>Estado</td>
+<td>Roto, deprecado</td>
+<td>Estándar activo</td>
+</tr>
+<tr>
+<td>Sesgos conocidos</td>
+<td>Sí</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Resistente a timing attacks</td>
+<td>No</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>Usado en</td>
+<td>SSL, WEP (legacy)</td>
+<td>TLS 1.3, WireGuard, QUIC</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ataques-a-stream-ciphers">Ataques a Stream Ciphers</h2>
+<h3 id="two-time-pad-reutilizacion-de-clave">Two-time pad — reutilización de clave</h3>
+<p>El ataque más devastador. Si la misma clave <code>K</code> y el mismo IV se usan para cifrar dos mensajes distintos:  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>E₁ = x₁ ⊕ Keystream
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Y₂ = y₂ ⊕ Keystream
+</code></pre></div>
+<p>Un atacante que intercepta ambos puede calcular:  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Y₁ ⊕ Y₂ = X₁ ⊕ X₂
+</code></pre></div>
+<p>El keystream se cancela. Con el XOR de los dos plaintexts y análisis de lenguaje, ambos mensajes son recuperables.  </p>
+<p><strong>Ejemplo histórico:</strong> proyecto VENONA (1943-1980). La inteligencia soviética reutilizó claves OTP bajo presión operacional durante la Segunda Guerra Mundial. El NSA tardó décadas en descifrar los mensajes, pero lo logró exactamente por este motivo.  </p>
+<p><strong>Regla:</strong> una clave + IV nunca deben repetirse.  </p>
+<h3 id="bit-flipping-attack">Bit-flipping attack</h3>
+<p>Un atacante que intercepta el ciphertext puede modificar bits de forma predecible:  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Y&#39; = Y ⊕ E
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>→ al descifrar: X&#39; = X ⊕ E
+</code></pre></div>
+<p>Sin conocer la clave, puede alterar bits específicos del plaintext. Los stream ciphers garantizan <strong>confidencialidad</strong>, pero no <strong>integridad</strong>.  </p>
 <hr />
 <h2 id="conceptos-clave-de-esta-clase">Conceptos clave de esta clase</h2>
 <ul>
-<li><strong>Criptografía:</strong> transformar información para garantizar confidencialidad, integridad y autenticidad.</li>
-<li><strong>Tríada CIA:</strong> tres objetivos independientes que casi siempre se necesitan juntos.</li>
-<li><strong>Seguridad por oscuridad:</strong> depender del secreto del diseño o funcionamiento del algoritmo.</li>
-<li><strong>Principio de Kerckhoffs:</strong> la seguridad está en la clave, no en el algoritmo.</li>
-<li><strong>Análisis de frecuencia:</strong> rompe toda sustitución simple. Motor de la evolución criptográfica.</li>
-<li><strong>Modelos de ataque:</strong> ciphertext-only → known-plaintext → chosen-plaintext → chosen-ciphertext.</li>
-<li><strong>Aritmética modular:</strong> el lenguaje matemático base de toda la criptografía clásica y moderna.</li>
+<li><strong>Stream cipher:</strong> cifra el mensaje bit a bit con un keystream generado por un CSPRNG. La seguridad depende de la indistinguibilidad del keystream.  </li>
+<li><strong>TRNG / PRNG / CSPRNG:</strong> tres niveles de aleatoriedad. Solo TRNG y CSPRNG son aptos para criptografía.  </li>
+<li><strong>OTP:</strong> stream cipher con clave verdaderamente aleatoria. Único sistema con seguridad perfecta probada. Impráctico.  </li>
+<li><strong>Seguridad perfecta:</strong> el ciphertext no revela nada sobre el plaintext. Requiere clave ≥ longitud del mensaje (Shannon).  </li>
+<li><strong>Seguridad computacional:</strong> romper el sistema es computacionalmente inviable. Base de toda la criptografía práctica.  </li>
+<li><strong>Two-time pad:</strong> reutilizar clave cancela el keystream. Fatal e irrecuperable.  </li>
+<li><strong>ChaCha20:</strong> stream cipher moderno de referencia. RC4 está roto.  </li>
 </ul>
 <hr />
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li>Paar, C. &amp; Pelzl, J. — Understanding Cryptography  </li>
 <li>Stallings, W. — Cryptography and Network Security  </li>
-<li>Singh, Simon - The code book  </li>
 </ul>
 <hr />
 
