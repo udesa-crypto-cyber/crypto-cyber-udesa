@@ -1658,14 +1658,14 @@
 </code></pre></div>
 <p>El receptor, con la misma clave, genera el mismo keystream y revierte la operación. La seguridad depende de que el <em>keystream sea indistinguible de aleatoriedad real</em>.</p>
 <div align="center">
-  <img src="./images/StreamCipher.png" alt="Stream Cipher" width="400">
+  <img src="/crypto-cyber/docs/modulo-1-criptografia/images/StreamCipher.png" alt="Stream Cipher" width="400">
 </div>
 
 <h3 id="cifrado-por-bloques-clase-3">Cifrado por bloques (<a href="../clase-03-cifrado-bloques/">Clase 3</a>)</h3>
 <p>Los cifrados por bloques cifran bloques enteros de bits de texto plano al mismo tiempo con la misma key.  </p>
 <p>Esto significa que el cifrado de un bit del texto plano en un bloque específico depende de todos los bits del mismo bloque.  </p>
 <div align="center">
-  <img src="./images/BlockCipher.png" alt="Block Cipher" width="400">
+  <img src="/crypto-cyber/docs/modulo-1-criptografia/images/BlockCipher.png" alt="Block Cipher" width="400">
 </div>
 
 <p>Algunos puntos para destacar:<br />
@@ -1774,27 +1774,47 @@ Tengo que generar entonces mi Sᵢ que me permita hacer esta operación:  </p>
 1. Es la única que al aplicarla dos veces recuperás el mensaje original.<br />
 2. El output es perfectamente balanceado, siendo exactamente 50% de probabilidades para 0 o 1 cualquiera sea el input.<br />
 3. OR, AND y NAND son irreversibles porque causan pérdida de información.  </p>
-<p>AND          <br />
-| x | k | y |<br />
-|---|---|---|<br />
-| 0 | 0 | 0 |<br />
-| 0 | 1 | 0 |<br />
-| 1 | 0 | 0 |<br />
-| 1 | 1 | 1 |  </p>
-<p>OR<br />
-| x | k | y |<br />
-|---|---|---|<br />
-| 0 | 0 | 0 |<br />
-| 0 | 1 | 1 |<br />
-| 1 | 0 | 1 |<br />
-| 1 | 1 | 1 | </p>
-<p>NAND<br />
-| x | k | y |<br />
-|---|---|---|<br />
-| 0 | 0 | 1 |<br />
-| 0 | 1 | 1 |<br />
-| 1 | 0 | 1 |<br />
-| 1 | 1 | 0 |  </p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>k</th>
+<th>AND</th>
+<th>OR</th>
+<th>NAND</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 <p>Por ejemplo, para AND la info se pierde si algún bit es 0 → 0 AND A = 0 → No tengo manera de saber si el bit era 0 o 1.<br />
 Con OR también... A OR 1 = 1.  </p>
 <hr />
