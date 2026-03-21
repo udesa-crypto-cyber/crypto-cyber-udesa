@@ -2007,7 +2007,7 @@ Entonces, se separa el texto plano A en bloques de 16 bytes, se aplica una susti
 <p><strong>4. AddRoundKey:</strong> XOR del bloque con la subclave de esa ronda, derivada de la clave original mediante el <strong>key schedule</strong> de AES.</p>
 <p>La última ronda omite MixColumns.</p>
 <div align="center">
-  <img src="/crypto-cyber/modulo-1-criptografia/images/AESRound.png" alt="Rondas de AES " width="400">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/AESRounds.png" alt="Rondas de AES " width="400">
 </div>
 
 <h3 id="por-que-aes-es-seguro">Por qué AES es seguro</h3>
@@ -2026,7 +2026,7 @@ Entonces, se separa el texto plano A en bloques de 16 bytes, se aplica una susti
 </div>
 
 <p>El modo más simple: cada bloque se cifra de forma completamente independiente.  </p>
-<div style="background:#1e1e1e; padding:10px; border-radius:5px; font-family:monospace">
+<div style="background:#f5f5f5b3; padding:10px; border-radius:5px; font-family:monospace">
   C<sub>i</sub> = E(K, P<sub>i</sub>)
 </div>
 
@@ -2037,7 +2037,7 @@ Entonces, se separa el texto plano A en bloques de 16 bytes, se aplica una susti
 </div>
 
 <p>Antes de cifrar cada bloque, se hace XOR con el ciphertext del bloque anterior.  </p>
-<div style="background:#1e1e1e; padding:10px; border-radius:5px; font-family:monospace">
+<div style="background:#f5f5f5b3; padding:10px; border-radius:5px; font-family:monospace">
   C<sub>i</sub> = E(K, P<sub>i</sub> ⊕ C<sub>i-1</sub>)
   C<sub>0</sub> = IV
 </div>
@@ -2054,7 +2054,7 @@ Entonces, se separa el texto plano A en bloques de 16 bytes, se aplica una susti
 </div>
 
 <p>Convierte el block cipher en un stream cipher. Un contador (nonce + número de bloque) se cifra y el resultado se usa como keystream.  </p>
-<div style="background:#1e1e1e; padding:10px; border-radius:5px; font-family:monospace">
+<div style="background:#f5f5f5b3; padding:10px; border-radius:5px; font-family:monospace">
   Keystream<sub>i</sub> = E(K, Nonce||Counter<sub>i</sub>)
   C<sub>i</sub> = P<sub>i</sub> ⊕ Keystream<sub>i</sub>
 </div>
