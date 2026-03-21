@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#en-construccion" class="md-skip">
+        <a href="#clase-3-cifrado-simetrico-por-bloques" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -506,6 +506,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase 3 — Cifrado por Bloques
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -522,6 +540,386 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-cifrado-por-bloques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué es un cifrado por bloques?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es un cifrado por bloques?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-clave-con-stream-ciphers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencias clave con stream ciphers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-des-nist-ibm-y-aes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia: DES, NIST, IBM y AES
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentos-confusion-y-difusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamentos: Confusión y Difusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#des-data-encryption-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DES — Data Encryption Standard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DES — Data Encryption Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funcionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permutacion-inicial-y-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permutación inicial y final
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcion-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Función f
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Schedule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-cayo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué cayó
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3des-triple-des" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3DES — Triple DES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3DES — Triple DES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tamano-de-clave-efectivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tamaño de clave efectivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado actual
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aes-advanced-encryption-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES — Advanced Encryption Standard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AES — Advanced Encryption Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parámetros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura interna
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-aes-es-seguro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué AES es seguro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modos-de-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modos de Operación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modos de Operación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecb-electronic-codebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ECB — Electronic Codebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cbc-cipher-block-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CBC — Cipher Block Chaining
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctr-counter-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CTR — Counter Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-de-modos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparación de modos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream-ciphers-vs-block-ciphers-cuando-usar-cada-uno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream ciphers vs Block ciphers — ¿Cuándo usar cada uno?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-clave-de-esta-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptos clave de esta clase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-la-proxima-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para la próxima clase.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -957,6 +1355,375 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-cifrado-por-bloques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué es un cifrado por bloques?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es un cifrado por bloques?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-clave-con-stream-ciphers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencias clave con stream ciphers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-des-nist-ibm-y-aes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia: DES, NIST, IBM y AES
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentos-confusion-y-difusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamentos: Confusión y Difusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#des-data-encryption-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DES — Data Encryption Standard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DES — Data Encryption Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funcionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permutacion-inicial-y-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permutación inicial y final
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcion-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Función f
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Schedule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-cayo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué cayó
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3des-triple-des" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3DES — Triple DES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3DES — Triple DES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tamano-de-clave-efectivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tamaño de clave efectivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado actual
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aes-advanced-encryption-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES — Advanced Encryption Standard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AES — Advanced Encryption Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parámetros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura interna
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-aes-es-seguro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por qué AES es seguro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modos-de-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modos de Operación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modos de Operación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecb-electronic-codebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ECB — Electronic Codebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cbc-cipher-block-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CBC — Cipher Block Chaining
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctr-counter-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CTR — Counter Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-de-modos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparación de modos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream-ciphers-vs-block-ciphers-cuando-usar-cada-uno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream ciphers vs Block ciphers — ¿Cuándo usar cada uno?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-clave-de-esta-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptos clave de esta clase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-la-proxima-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para la próxima clase.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -975,10 +1742,432 @@
   
 
 
-<h1 id="en-construccion">En construcción</h1>
+<h1 id="clase-3-cifrado-simetrico-por-bloques">Clase 3 — Cifrado Simétrico por Bloques</h1>
 <blockquote>
-<p>Apuntes de esta clase la próxima semana.</p>
+<p><strong>Módulo:</strong> Criptografía  </p>
 </blockquote>
+<hr />
+<h2 id="que-es-un-cifrado-por-bloques">¿Qué es un cifrado por bloques?</h2>
+<p>A diferencia de los stream ciphers que cifran bit a bit, un <strong>block cipher</strong> toma el texto plano, lo divide en bloques de tamaño fijo, y cifra cada bloque completo de una sola vez usando la misma clave.  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Plaintext:  [bloque 1] [bloque 2] [bloque 3] ...
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>               ↓           ↓           ↓
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Ciphertext: [E(K, b1)] [E(K, b2)] [E(K, b3)] ...
+</code></pre></div>
+<p>El cifrado de cada bit dentro de un bloque <strong>depende de todos los otros bits del mismo bloque</strong> — a diferencia del stream cipher, donde cada bit se cifra de forma independiente.  </p>
+<h3 id="diferencias-clave-con-stream-ciphers">Diferencias clave con stream ciphers</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Stream cipher</th>
+<th>Block cipher</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unidad de cifrado</td>
+<td>Bit a bit</td>
+<td>Bloques (64 o 128 bits)</td>
+</tr>
+<tr>
+<td>Dependencia</td>
+<td>Cada bit independiente</td>
+<td>Todos los bits del bloque interactúan</td>
+</tr>
+<tr>
+<td>Estado interno</td>
+<td>Keystream progresivo</td>
+<td>Sin estado entre bloques (en modo básico)</td>
+</tr>
+<tr>
+<td>Uso típico</td>
+<td>Dispositivos con recursos limitados</td>
+<td>Comunicaciones por Internet, almacenamiento</td>
+</tr>
+<tr>
+<td>Ejemplo</td>
+<td>ChaCha20</td>
+<td>AES</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="historia-des-nist-ibm-y-aes">Historia: DES, NIST, IBM y AES</h2>
+<p>En 1972, el <em>US National Buteau of Standards</em> (NBS, actualmente llamado <em>National Institute of Standards and Technology</em>, NIST) inició un pedido de propuestas para crear un cifrado estándar en USA. La idea era encontrar un único cifrado seguro que se pudiese implementar en una gran varidad de aplicaciones. Hasta ese momento, los gobiernos habían considerado que la seguridad era un tema que debía mantenerse en secreto. Sin embargo, a inicios de 1970, la demanda por el cifrado para aplicaciones comerciales, como las relacionadas con los bancos, adquirió tal presión que no pudieron seguir ignorando el tema.  </p>
+<p>Entonces, luego de varias propuestas, en 1974 recibieron al mejor candidato, proveniente de un equipo de criptógrafos de IBM. El algoritmo estaba basada en el cifrado llamado <em>Lucifer</em>, que era una familia de cifrados desarrollada por Horst Feistel a finales de 1960. Lucifer era un cifrado Fiestel, que encriptaba bloques de 64 bits usando una key de 128 bits.<br />
+Para poder investigar en profundidad la seguridad de los algoritmos, el NBS había pedido la participación de la <em>National Security Agency</em> (NSA). Parece que la NSA habría influenciado cambios en este último cifrado de IBM, que fue incluso rebautizado como DES, imponiendo dos cambios:<br />
+- Uno de los cambios fue que DES fue específicamente diseñado para soportar <em>criptoanálisis diferencial</em>, un ataque que no se dio a conocer hasta 1990.<br />
+- Un segundo cambio vino de la mano de un pedido específico de la NSA de reducir el tamaño de la key del cifrado Lucifer de 128 bits a 56 bits, lo que hacía al algoritmo más vulnerable a fuerza bruta.  </p>
+<p>La participación de la NSA preocupó a las personas, quienes sospechaban que el organismo había implantado una manera secreta de romper el algoritmo, por ejemplo vía alguna propiedad matemática. Se temía que DES fuese vulnerable y que sólo lo supiera la NSA, la cual tenía sus razones para implementar las modificaciones nombradas.  </p>
+<p>Pero más allá de las críticas y las preocupaciones, en 1977 el NBS finalmente publicó oficialmente el <em>Data Encryption Standard</em> (DES), una modificación del cifrado de IBM. Si bien la descripción del algoritmo estaba bien detallada, se omitía la motivación de los criterios de diseño, en especial la elección de las <em>cajas de sustitución</em> que <em>nunca fue aclarada públicamente</em>.  </p>
+<p>Con la adopción creciente de las computadoras personales a inicio de 1980, se volvió más fácil analizar la estructura de DES. Durante ese período, la comunidad de criptoanalistas creció y pusieron a DES bajo escrutinio. Sin embargo, no lograron encontrar vulnerabilidades serias hasta 1990. A pesar de no tener vulnerabilidades graves y ser altamente usado, la idea original del NIST era tener un estándar por 10 años. Por lo que, en 2001, DES es reemplazado finalmente por el <em>Advanced Encryption Standard</em> (AES).</p>
+<hr />
+<h2 id="fundamentos-confusion-y-difusion">Fundamentos: Confusión y Difusión</h2>
+<p>Shannon estableció en 1949 que un cifrado seguro debe combinar dos propiedades:</p>
+<p><strong>Confusión:</strong> es una operación criptográfica donde la relación entre la key y el texto cifrado es opaca, o al menos lo más compleja posible. Actualmente, se logra con <strong>sustitución</strong> - los bits son reemplazados por ciertos valores pre-establecidos.</p>
+<p><strong>Difusión:</strong> es una operación criptográfica donde la influencia de cada bit del texto plano está dispersa en muchos bits del texto cifrado, con el objetivo de ocultar propiedades estadísticas del texto plano. Se logra con <strong>permutación</strong> — se cambia un bit en el texto plano y los bits cambiados se redistribuyen por todo el bloque cifrado, provocando un <strong>efecto avalancha</strong>.</p>
+<p>Los cifrados clásicos, que usaban sólo confusión, no son seguros. Tampoco los que aplican sólo permutación. Para lograr un cifrado más fuerte, se aplican múltiples <strong>rondas</strong> sucesivas, concatenando así varias de estas operaciones.</p>
+<p>Shannon estableció que un cifrado debe garantizar <strong>ambas en conjunto</strong> para ser seguro.</p>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/ProductCipher.png" alt="N rondas de operaciones de confusión y difusión." width="400">
+</div>
+
+<hr />
+<h2 id="des-data-encryption-standard">DES — Data Encryption Standard</h2>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/DES.png" alt="DES" width="400">
+</div>
+
+<h3 id="estructura">Estructura</h3>
+<p>DES opera sobre bloques de <strong>64 bits</strong> con una clave de <strong>56 bits</strong>. Usa una <strong>red de Feistel</strong> de 16 rondas.  </p>
+<p><strong>Red de Feistel:</strong> es una estructura que divide el bloque en dos mitades (L - left, R - right) y en cada ronda aplica:  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>L_nueva = R
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>R_nueva = L ⊕ F(R, K_ronda)
+</code></pre></div>
+<p>La ventaja de las redes de Feistel es que el cifrado y el descifrado son la misma operación, sólo que el descifrado requiere las subclaves en orden inverso.  </p>
+<p>La <strong>red de Feistel</strong> es usada en muchos algoritmos de cifrado por bloques, pero NO en todos. AES no usa redes de Feistel.  </p>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/DESStructure.png" alt="Estructura iterativa de DES" width="400">
+</div>
+
+<h3 id="funcionamiento">Funcionamiento</h3>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/FeistelDES.png" alt="Estructura de DES" width="400">
+</div>
+
+<ol>
+<li>Luego de la permutación inicial (<em>PI</em>) del texto plano de 64-bits, es separado en dos mitades: L<sub>0</sub> y R<sub>0</sub>, cada una de 32 bits. Estas dos mitades son el input de la red de Feistel, que consiste en 16 rondas.  </li>
+<li>Se toma el lado derecho y se aplica una función que es <em>super</em> importante. Es el corazón de DES.  </li>
+<li>Se hace un XOR del output de la función anterior con el lado izquierdo del texto plano.  </li>
+<li>Se repite este proceso durante 16 rondas.  </li>
+<li>Finalmente, se permuta el lado derecho con el lado izquierdo (el inverso de lo que se hizo en el paso 1).  </li>
+</ol>
+<p>En cada round la fracción de la key es derivada de la key principal de 56 bits usando algo llamado <strong>key schedule</strong>.</p>
+<blockquote>
+<p>Nota 1: La red de Feistel sólo cifra (o descrifra) la mitad del input en cada ronda: el lado izquierdo. El lado derecho se copia tal cual a la siguiente ronda. La función <em>f</em> no cifra el lado derecho, si no que actúa como un pseudo-random number generator, con dos parámetros de entrada: el lado derecho y un pedazo de la key. Luego, su output, se usa para cifrar el lado iqzuierdo.  </p>
+<p>Nota 2: La función <em>f</em> es la que garantiza difusión y confusión, por lo que tiene que ser diseñada con muchísimo cuidado. Luego, la seguridad puede crecer o decrecer en base a la cantidad de bits usados en la key y la cantidad de rondas.</p>
+</blockquote>
+<h4 id="componentes">Componentes</h4>
+<h5 id="permutacion-inicial-y-final">Permutación inicial y final</h5>
+<ul>
+<li>Son permutaciones simples.  </li>
+<li>No agregan seguridad.  </li>
+<li>Son tablas públicas.  </li>
+</ul>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/IPFP.png" alt="Permutaciones inicial y final" width="400">
+</div>
+
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/IPFPTables.png" alt="Tablas de permutaciones" width="400">
+</div>
+
+<p>No se conoce la justificación de estas permutaciones, aunque se supone que su objetivo original era acomodar los bits para la carga y la descarga de los datos en el hardware. Es uno de los puntos de sospecha de backdoor de la NSA.  </p>
+<p>La tabla se lee de izquierda a derecha, y de arriba hacia abajo: el input del bit 58 es mapeado al output de la posición 1, el bit 50 es mapeado al output de la posición 2, y así...  </p>
+<h5 id="funcion-f">Función <em>f</em></h5>
+<ul>
+<li>Rol crucial en la seguridad de DES.  </li>
+<li>Input: el lado derecho del output de la ronda anterior y el key de la ronda actual k<sub>i</sub>.  </li>
+<li>Output: será usado para aplicar XOR cifrando los bits correspondientes a la mitad izquierda.  </li>
+</ul>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/FFunction.png" alt="Bloque Función F" width="400">
+</div>
+
+<ul>
+<li><em>E-box</em>: Los primeros 32 bits de input se expanden a 48 bits, partiendo en bloques de 4 bits y expandiendo cada uno en 6 bits. 16 de los 32 bits aparecerán dos veces en el output, y a la vez ningún bit de la entrada aparecerá dos veces en el mismo bloque de 6 bits. Esto genera <strong>difusión</strong>.  </li>
+</ul>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/E-box.png" alt="Expansión" width="400">
+</div>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/E-box-table.png" alt="Tabla de expansión" width="400">
+</div>
+
+<ul>
+<li><em>XOR con key k<sub>i</sub></em>: Se hace un XOR con la subkey de la ronda actual.  </li>
+<li><em>S-boxes</em>: Corazón de DES. Cada bloque de 6 bits es ingresado a unas tablas de sustitución llamadas <strong>S-boxes</strong>. Cada <em>sustitution box</em> busca reemplazar los 6 bits del input por 4 bits. No es una sustitución 1 a 1. El bit más significativo y el bit menos significativo del input son usados para determinar la fila y los bits intermedios para determinar la columna.  </li>
+</ul>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/S-box.png" alt="Expansión" width="400">
+</div>
+
+<p>Ej: input: 100101<sub>2</sub> ingresará en la S-box con las siguientes coordenadas: 11<sub>2</sub> = 3 (cuarta fila, empieza en 00), 0010<sub>2</sub> = 2 (tercera columna).  </p>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/Ej1.png" alt="100101" width="400">
+</div>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/Ej2.png" alt="S-box output" width="400">
+</div>
+
+<p>El input 100101<sub>2</sub> en la fila 3 y la columna 2, da como resultado un 8 = 1000<sub>2</sub>.  </p>
+<p>Las tablas son públicas y al ser una transformación no lineal generan <strong>confusión</strong>. S(a) ⊕ S(b) ≠ S(a ⊕ b)</p>
+<p>Nunca fue revelado cómo se eligieron estas tablas, por lo que generó especulación respecto a un posible backdoor de la NSA. Finalmente, en 1990 salieron a la luz ciertos criterios, aunque nunca se oficializaron.<br />
+El ataque <em>differential cryptanalysis</em> fue descubierto por la comunidad en 1990. IBM declaró haberlo descubierto 16 años antes, ajustando estas tablas de DES para hacerlo resistente.</p>
+<ul>
+<li><em>Permutación P</em>: finalmente se hace una última permutación dentro de este bloque llamada <em>P</em> del output de las S-boxes, generando <strong>difusión</strong> debido a que se mezclan los diferentes outpus. Por lo tanto, el cambio de 1 bit en la entrada de cualquier S-boxes, generará cambios en varias entradas de las S-boxes de la siguiente ronda.</li>
+</ul>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/PermutacionP.png" alt="Permutación P" width="400">
+</div>
+
+<h5 id="key-schedule">Key Schedule</h5>
+<ul>
+<li>Se computa la key 16 veces: k<sub>1</sub>, k<sub>2</sub>, ..., k<sub>16</sub>.  </li>
+<li>Se generan subclaves de ronda a partir de la clave principal: 56 bits = subclaves de 48 bits.  </li>
+</ul>
+<p>Entonces, siguiendo con el key schedule:<br />
+- Se eliminan los bits múltiplos de 8: 8, 16, 24, ..., 64. Se hace una permutación inicial con los 56 bits restantes, según una tabla P1 (también es una tabla pública). No se sabe por qué se reduce así la key.<br />
+- El output se divide en dos mitades, de 28 bits cada una. Cada mitad, se rota de manera cíclica según:<br />
+    - Si la ronda <em>i</em> es la 1, 2, 9, 16, los bits rotan 1 posición hacia la izquierda.<br />
+    - Si la ronda <em>i</em> es algún otro número = se rotan 2 posiciones hacia la izquierda.</p>
+<p>Si se sigue rotando la key, se rotarán 28 posiciones (el tamaño de cada mitad). Por lo que en la ronda 16 volvemos a empezar... Por lo que C<sub>0</sub> = C<sub>16</sub> y D<sub>0</sub> = D<sub>16</sub>. Es una propiedad que permite el descifrado usando la misma key original.</p>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/KeySchedule.png" alt="100101" width="400">
+</div>
+
+<p>Entonces, el plan de llaves se resume a tomar la subkey anterior, permutarla, desplazarla y comprimirla para generar la subkey nueva de 48 bits.  </p>
+<p>Es una manera simple de generar subclaves, aunque los métodos modernos tienen generadores más complejos.  </p>
+<blockquote>
+<p>Leer el método de descifrado de DES en la sección 3.4 del libro de Paar.  </p>
+</blockquote>
+<h3 id="por-que-cayo">Por qué cayó</h3>
+<p>Las mayores críticas a DES fueron dos:<br />
+- El <strong>tamaño de la clave</strong>. Con 56 bits, el espacio de claves tiene 2<sup>56</sup> posibilidades (~72 cuatrillones). En 1977 eso parecía suficiente. En 1998, se construyó <strong>Deep Crack</strong> por menos de 250.000 dólares y rompió DES por fuerza bruta en menos de 3 días.<br />
+<em>Búsqueda exhaustiva</em>:<br />
+    - Se tiene un par de plaintext-ciphertext de ejemplo <em>(x, y)</em>.<br />
+    - Se prueban <strong>todas</strong> las posibles de keys (2<sup>56</sup>) que sigan la condición: el ciphertext descifrado con la posible key k<sup>i</sup> es el plaintext.<br />
+- El criterio de diseño de las S-boxes seguía en secreto y podía existir un ataque analítico que explotara las propiedades matemáticas de las cajas. Más allá de que intentaron intensamente, no hay hoy en día un ataque eficiente de este estilo.  </p>
+<hr />
+<h2 id="3des-triple-des">3DES — Triple DES</h2>
+<p>Solución de transición: aplicar DES tres veces con claves distintas.  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>C = E(K3, D(K2, E(K1, P)))
+</code></pre></div>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/3DES.png" alt="3DES" width="400">
+</div>
+
+<h3 id="tamano-de-clave-efectivo">Tamaño de clave efectivo</h3>
+<p>Con tres claves distintas (3DES-EDE): de 56 bits a 168 bits, pero <strong>meet-in-the-middle</strong> reduce la seguridad efectiva a ~112 bits.</p>
+<p><strong>Meet-in-the-middle:</strong> en lugar de buscar en el espacio completo, el atacante cifra desde el plaintext con todas las K1 posibles y descifra desde el ciphertext con todas las K3 posibles, buscando colisiones en el medio. Reduce 2<sup>168</sup> a 2<sup>112</sup>.</p>
+<h3 id="estado-actual">Estado actual</h3>
+<p>3DES fue deprecado por NIST en 2023. Es lento (tres pasadas de DES) y el espacio de clave efectivo ya no es suficiente para los estándares actuales. AES lo reemplazó completamente.</p>
+<hr />
+<h2 id="aes-advanced-encryption-standard">AES — Advanced Encryption Standard</h2>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/AES.png" alt="AES" width="400">
+</div>
+
+<h3 id="historia">Historia</h3>
+<p>En 1997 el NIST convocó un concurso público para reemplazar DES. En 2001 seleccionó <strong>Rijndael</strong>, diseñado por los belgas Joan Daemen y Vincent Rijmen. Desde entonces es el estándar mundial de cifrado simétrico.  </p>
+<p>Al nacer público, muchas personas pudieron evaluarlo.</p>
+<h3 id="parametros">Parámetros</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>AES-128</th>
+<th>AES-192</th>
+<th>AES-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tamaño de bloque</td>
+<td>128 bits</td>
+<td>128 bits</td>
+<td>128 bits</td>
+</tr>
+<tr>
+<td>Tamaño de clave</td>
+<td>128 bits</td>
+<td>192 bits</td>
+<td>256 bits</td>
+</tr>
+<tr>
+<td>Número de rondas</td>
+<td>10</td>
+<td>12</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<h3 id="estructura-interna">Estructura interna</h3>
+<p>AES no usa red de Feistel — usa una <strong>red de sustitución-permutación (SPN)</strong>.  </p>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/AESStructure.png" alt="Estructura AES " width="400">
+</div>
+
+<p>Para operar, se utilizan matrices (simplificado en este apunte). <br />
+Al bloque de 128 bits se le aplican cuatro transformaciones en cada ronda:</p>
+<p><strong>1. SubBytes (confusión):</strong> cada byte se reemplaza por otro según una S-box fija. La S-box de AES fue diseñada para maximizar la no-linealidad y resistir criptoanálisis diferencial.<br />
+Entonces, se separa el texto plano A en bloques de 16 bytes, se aplica una sustitución con las tablas S y se obtiene B. Se genera entonces una relación compleja entre A y B.</p>
+<p><strong>2. ShiftRows (difusión):</strong> las filas de la matriz se desplazan cíclicamente. La fila 0 no se mueve, la fila 1 se desplaza 1 posición, la fila 2 dos posiciones, y así. Se reordenan los bytes.</p>
+<p><strong>3. MixColumns (difusión):</strong> cada columna se multiplica por una matriz fija en el campo de Galois GF(2<sup>8</sup>) (para que el resultado de la multiplicación sigan siendo bytes). Al no tener 0 en ninguna fila, asegura que cada byte de salida dependa de los 4 bytes de la columna de entrada. Aporta fuerte difusión porque un cambio de 1 bit se propaga a los 4 bytes de la columna en MixColumns, afectando 32 bits localmente.</p>
+<p><strong>4. AddRoundKey:</strong> XOR del bloque con la subclave de esa ronda, derivada de la clave original mediante el <strong>key schedule</strong> de AES.</p>
+<p>La última ronda omite MixColumns.</p>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/AESRound.png" alt="Rondas de AES " width="400">
+</div>
+
+<h3 id="por-que-aes-es-seguro">Por qué AES es seguro</h3>
+<ul>
+<li>10-14 rondas de sustitución + permutación destruyen cualquier correlación estadística entre plaintext y ciphertext</li>
+<li>La S-box fue elegida para resistir los mejores ataques conocidos (criptoanálisis diferencial)</li>
+<li>Con AES-128, el mejor ataque conocido requiere 2<sup>126</sup> operaciones — computacionalmente inviable (llamado <em>biclique attack</em>, una variante de <em>meet-in-the-middle</em>)</li>
+<li>No hay ataque práctico conocido contra AES bien implementado</li>
+</ul>
+<hr />
+<h2 id="modos-de-operacion">Modos de Operación</h2>
+<p>Un block cipher sólo define cómo cifrar un bloque. Para mensajes más largos necesitamos un <strong>modo de operación</strong> que especifique cómo encadenar los bloques.</p>
+<h3 id="ecb-electronic-codebook">ECB — Electronic Codebook</h3>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/ECBMode.png" alt="ECB" width="400">
+</div>
+
+<p>El modo más simple: cada bloque se cifra de forma completamente independiente.  </p>
+<div style="background:#1e1e1e; padding:10px; border-radius:5px; font-family:monospace">
+  C<sub>i</sub> = E(K, P<sub>i</sub>)
+</div>
+
+<p><strong>Por qué es inseguro:</strong> bloques de plaintext idénticos producen bloques de ciphertext idénticos.  </p>
+<h3 id="cbc-cipher-block-chaining">CBC — Cipher Block Chaining</h3>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/CBCMode.png" alt="CBC" width="400">
+</div>
+
+<p>Antes de cifrar cada bloque, se hace XOR con el ciphertext del bloque anterior.  </p>
+<div style="background:#1e1e1e; padding:10px; border-radius:5px; font-family:monospace">
+  C<sub>i</sub> = E(K, P<sub>i</sub> ⊕ C<sub>i-1</sub>)
+  C<sub>0</sub> = IV
+</div>
+
+<p>El IV es un valor aleatorio público que garantiza que dos mensajes idénticos producen ciphertexts distintos.  </p>
+<p><strong>Propiedades:</strong>
+- Se elige un IV por cada mensaje a cifrar. Si se reutiliza el mismo IV y la misma clave para dos mensajes distintos, si ambos mensajes comparten un prefijo común (ej, empiezan con la misma palabra) entonces los primeros bloques serán idénticos y revelerán coincidencia.
+- Bloques idénticos en el plaintext producen ciphertexts distintos
+- El cifrado es <strong>secuencial</strong> — no se puede paralelizar (cada bloque depende del anterior)
+- Un error en un bloque afecta ese bloque y el siguiente (propagación de errores)</p>
+<h3 id="ctr-counter-mode">CTR — Counter Mode</h3>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/CTRMode.png" alt="CTR" width="400">
+</div>
+
+<p>Convierte el block cipher en un stream cipher. Un contador (nonce + número de bloque) se cifra y el resultado se usa como keystream.  </p>
+<div style="background:#1e1e1e; padding:10px; border-radius:5px; font-family:monospace">
+  Keystream<sub>i</sub> = E(K, Nonce||Counter<sub>i</sub>)
+  C<sub>i</sub> = P<sub>i</sub> ⊕ Keystream<sub>i</sub>
+</div>
+
+<p><strong>Propiedades:</strong>
+- Cifrado y descifrado completamente <strong>paralelizables</strong><br />
+- Acceso aleatorio al ciphertext (se puede descifrar el bloque i sin descifrar los anteriores)<br />
+- Si el mismo nonce se reutiliza con el mismo CTR → inseguro. Si dos textos planos se cifran con el mismo input, y el atacante conoce uno de los dos textos planos, puede computar el key stream.  </p>
+<h3 id="comparacion-de-modos">Comparación de modos</h3>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Paralelizable</th>
+<th>IV/Nonce necesario</th>
+<th>Propagación de errores</th>
+<th>Uso recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ECB</td>
+<td>✓</td>
+<td>✗</td>
+<td>No se propaga</td>
+<td><strong>Nunca</strong></td>
+</tr>
+<tr>
+<td>CBC</td>
+<td>Solo descifrado</td>
+<td>✓ (aleatorio)</td>
+<td>2 bloques</td>
+<td>Legacy (TLS &lt; 1.3)</td>
+</tr>
+<tr>
+<td>CTR</td>
+<td>✓</td>
+<td>✓ (único)</td>
+<td>Solo el bloque afectado</td>
+<td>Cuando no se necesita autenticación</td>
+</tr>
+<tr>
+<td>GCM</td>
+<td>✓</td>
+<td>✓ (único)</td>
+<td>Detectado (autenticado)</td>
+<td><strong>Estándar actual</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="stream-ciphers-vs-block-ciphers-cuando-usar-cada-uno">Stream ciphers vs Block ciphers — ¿Cuándo usar cada uno?</h2>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Stream cipher</th>
+<th>Block cipher</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recursos disponibles</td>
+<td>Limitados (IoT, embedded)</td>
+<td>Suficientes</td>
+</tr>
+<tr>
+<td>Latencia</td>
+<td>Baja (cifra en tiempo real)</td>
+<td>Algo mayor (procesa bloques)</td>
+</tr>
+<tr>
+<td>Acceso aleatorio</td>
+<td>Sí (CTR)</td>
+<td>Sí (CTR, GCM)</td>
+</tr>
+<tr>
+<td>Estándar en Internet</td>
+<td>—</td>
+<td>AES-GCM (TLS 1.3)</td>
+</tr>
+<tr>
+<td>Alternativa moderna</td>
+<td>ChaCha20-Poly1305</td>
+<td>AES-GCM</td>
+</tr>
+</tbody>
+</table>
+<p>En la práctica, <strong>AES-GCM y ChaCha20-Poly1305</strong> son los dos estándares que dominan. TLS 1.3 soporta ambos y elige según el hardware disponible: AES-GCM cuando hay instrucciones AES-NI en el procesador, ChaCha20-Poly1305 cuando no.  </p>
+<hr />
+<h2 id="conceptos-clave-de-esta-clase">Conceptos clave de esta clase</h2>
+<ul>
+<li><strong>Block cipher:</strong> cifra bloques completos; cada bit depende de todos los otros del bloque.</li>
+<li><strong>Confusión + difusión (Shannon):</strong> las dos propiedades base de todo cifrado seguro. Sustitución + permutación en múltiples rondas.</li>
+<li><strong>DES:</strong> 56 bits de clave → roto por fuerza bruta en 1998. La lección: la seguridad computacional tiene fecha de vencimiento.</li>
+<li><strong>Red de Feistel:</strong> estructura de DES. Cifrado y descifrado usan el mismo circuito con subclaves invertidas.</li>
+<li><strong>3DES:</strong> parche sobre DES. Meet-in-the-middle reduce seguridad efectiva a ~112 bits. Deprecado en 2023.</li>
+<li><strong>AES:</strong> SPN de 10-14 rondas. SubBytes + ShiftRows + MixColumns + AddRoundKey. Estándar actual, sin ataque práctico conocido.</li>
+<li><strong>Modos de operación:</strong> ECB (nunca), CBC (legado), CTR (paralelo, sin autenticación), GCM (estándar actual con autenticación).</li>
+<li><strong>Authenticated Encryption (GCM):</strong> confidencialidad + integridad en una operación. Lo que se usa en TLS 1.3.</li>
+</ul>
+<hr />
+<h2 id="para-la-proxima-clase">Para la próxima clase.</h2>
+<p>Arrancamos con <strong>criptografía asimétrica</strong>: fundamentos, comparativa con simétrica, y el problema del logaritmo discreto.  </p>
+<hr />
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li>Paar, C. &amp; Pelzl, J. — Understanding Cryptography</li>
+<li>Stallings, W. — Cryptography and Network Security</li>
+<li>Shannon, C. — Communication Theory of Secrecy Systems</li>
+<li>NIST FIPS 197 — <em>Advanced Encryption Standard</em> (estándar oficial de AES)</li>
+</ul>
+<hr />
 
 
 
