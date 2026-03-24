@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#en-construccion" class="md-skip">
+        <a href="#clase-4-criptografia-asimetrica-diffie-hellmanelgamal" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -534,6 +534,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase 4 — Criptografía Asimétrica I
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -550,6 +568,446 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#criptografia-simetrica-vs-asimetrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criptografía simétrica vs asimétrica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criptografía simétrica vs asimétrica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aclaraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aclaraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#los-problemas-distribucion-de-llaves-y-firmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Los problemas: distribución de llaves y firmas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-solucion-criptografia-asimetrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La solución: criptografía asimétrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#familias-de-algoritmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Familias de algoritmos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionamiento básico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-condiciones-de-diffie-hellman" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las condiciones de Diffie-Hellman
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ataques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ataques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ataques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fuerza-bruta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuerza bruta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computo-de-las-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómputo de las keys
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ataque-del-mensaje-probable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ataque del mensaje probable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentos-matematicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamentos matemáticos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamentos matemáticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grupos-ciclicos-y-raices-primitivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grupos cíclicos y raíces primitivas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-problema-del-logaritmo-discreto-dlp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El problema del logaritmo discreto (DLP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diffie-hellman-intercambio-de-claves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffie-Hellman — Intercambio de claves
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diffie-Hellman — Intercambio de claves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea-central" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea central
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocolo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocolo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-y-limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad y limitaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generador-de-numeros-aleatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generador de números aleatorios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-exclusion-de-1-y-p-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La exclusión de 1 y p-1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elgamal-cifrado-asimetrico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ElGamal — Cifrado asimétrico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ElGamal — Cifrado asimétrico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generacion-de-claves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generación de claves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cifrado-alice-bob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cifrado (Alice → Bob)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descifrado-bob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descifrado (Bob)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparativa-dh-vs-elgamal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa: DH vs ElGamal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-clave-de-esta-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptos clave de esta clase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-la-proxima-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para la próxima clase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#papers-originales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papers originales
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -957,6 +1415,435 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#criptografia-simetrica-vs-asimetrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criptografía simétrica vs asimétrica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criptografía simétrica vs asimétrica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aclaraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aclaraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#los-problemas-distribucion-de-llaves-y-firmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Los problemas: distribución de llaves y firmas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-solucion-criptografia-asimetrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La solución: criptografía asimétrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#familias-de-algoritmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Familias de algoritmos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionamiento básico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-condiciones-de-diffie-hellman" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las condiciones de Diffie-Hellman
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ataques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ataques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ataques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fuerza-bruta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuerza bruta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computo-de-las-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómputo de las keys
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ataque-del-mensaje-probable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ataque del mensaje probable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentos-matematicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamentos matemáticos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamentos matemáticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grupos-ciclicos-y-raices-primitivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grupos cíclicos y raíces primitivas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-problema-del-logaritmo-discreto-dlp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El problema del logaritmo discreto (DLP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diffie-hellman-intercambio-de-claves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffie-Hellman — Intercambio de claves
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diffie-Hellman — Intercambio de claves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea-central" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea central
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocolo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocolo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-y-limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad y limitaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generador-de-numeros-aleatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generador de números aleatorios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-exclusion-de-1-y-p-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La exclusión de 1 y p-1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elgamal-cifrado-asimetrico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ElGamal — Cifrado asimétrico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ElGamal — Cifrado asimétrico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generacion-de-claves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generación de claves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cifrado-alice-bob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cifrado (Alice → Bob)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descifrado-bob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descifrado (Bob)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparativa-dh-vs-elgamal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa: DH vs ElGamal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-clave-de-esta-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptos clave de esta clase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-la-proxima-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para la próxima clase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#papers-originales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papers originales
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -975,10 +1862,380 @@
   
 
 
-<h1 id="en-construccion">En construcción</h1>
+<h1 id="clase-4-criptografia-asimetrica-diffie-hellmanelgamal">Clase 4 — Criptografía Asimétrica - Diffie-Hellman/ElGamal</h1>
 <blockquote>
-<p>Apuntes de esta clase próximamente.</p>
+<p><strong>Módulo:</strong> Criptografía  </p>
 </blockquote>
+<hr />
+<h2 id="criptografia-simetrica-vs-asimetrica">Criptografía simétrica vs asimétrica</h2>
+<p>Hasta ahora todos los algoritmos que vimos — Caesar, AES, ChaCha20 — son <strong>simétricos</strong>: emisor y receptor usan la misma clave para cifrar y descrifrar. Pero hay un problema problema fundamental que no resolvimos todavía: <strong>la distribución de esa clave</strong>.</p>
+<p>La creación del concepto de <strong>clave pública</strong> fue la verdadera revolución de la criptografía. Después de muchos años trabajando con algoritmos que podían calcularse manualmente, el pico máximos de los algoritmos simétricos fue la creación del rotor electromecánico (como el de la máquina Enigma) que permitió la automatización de algunos cifrados, hacer cambios dinámicamente, y habilitó la practicidad y la velocidad antes que todo.<br />
+Pero el rotor y otros cifrados más complejos como DES, <em>no dejaban de ser sustituciones y permutaciones</em>.  </p>
+<p>En cambio, estos nuevos algoritmos de <em>clave pública</em> se basan en <strong>problemas matemáticos</strong>. Y en lugar de usar una sola key usan <strong>DOS separadas</strong>, lo que tuvo muchas consecuencias a nivel seguridad (<em>confidencialidad, no repudio</em>).  </p>
+<h3 id="aclaraciones">Aclaraciones</h3>
+<ul>
+<li>El cifrado de clave pública <strong>no</strong> es más resistente al criptoanálisis que el cifrado simétrico: la seguridad <em>NO</em> depende del algoritmo que es público por el principio de Kerchkoff, sino de la longitud de la clave. No hay nada, al menos <em>inicialmente</em> que haga que los cifrados de clave pública sean <em>mejores</em> que los cifrados simétricos.  </li>
+<li>E cifrado asimétrico <strong>no</strong> reemplaza al simétrico ni lo vuelve obsoleto: al contrario, el costo computacional de los cifrados simétricos es muchísimo mayor. Está universalmente aceptado usar cifrados de clave pública sólo para intercambio de claves y firmas digitales.  </li>
+<li>La distribución de claves <strong>no</strong> es trivial: los procedimientos no son ni más sencillos ni más eficientes que en los cifrados simétricos.   </li>
+</ul>
+<h3 id="los-problemas-distribucion-de-llaves-y-firmas">Los problemas: distribución de llaves y firmas</h3>
+<p>Si Alice y Bob quieren comunicarse de forma segura con AES, primero necesitan compartir una clave. Pero ¿cómo la comparten? Si la envían por un canal inseguro, cualquier atacante que la intercepte puede descifrar todos los mensajes. Si la intercambian en persona, no escala.<br />
+Entonces, tenemos dos opciones: 
+- Alguien nos comparte la llave de antemano.<br />
+- Hay una entidad central que distribuye esas llaves entre las partes participantes.  </p>
+<blockquote>
+<p>Nota de Diffie: <em>Qué tan impenetrable puede ser el sistema criptográfico si sus usuarios se ven forzados a compartir sus claves a una entidad central que puede ser comprometida por un robo o incluso por pedido judicial?</em></p>
+</blockquote>
+<p>Este es el <strong>problema de distribución de claves</strong>, y fue el principal obstáculo de la criptografía simétrica durante siglos.</p>
+<p>El otro problema es el uso de la criptografía en otros contextos que no fuesen situaciones militares, como fines comerciales o privados. Entonces, los mensajes y los documentos deberían tener algo equivalente a las firmas en papel. Es decir, se debía construir un método para estipular que un mensaje fue enviado por una persona particular y no por otra (<em>autenticidad o autenticación</em>) y garantizar que esa persona que envió el mensaje no pueda negar su participación (<em>no repudio</em>). Este problema será resuelto con el uso de <strong>firmas digitales</strong>.</p>
+<h3 id="la-solucion-criptografia-asimetrica">La solución: criptografía asimétrica</h3>
+<p>En 1976, Diffie y Hellman propusieron una idea radical: ¿qué pasaría si cada persona tuviera <strong>dos claves relacionadas matemáticamente</strong> — una pública que puede compartir con cualquiera, y una privada que sólo conoce esa persona?</p>
+<ul>
+<li>La <strong>clave pública</strong> se puede compartir libremente. Cualquiera puede usarla para cifrar un mensaje dirigido a vos.</li>
+<li>La <strong>clave privada</strong> la guardás sólo vos. Es la única que puede descifrar lo que se cifró con tu clave pública.</li>
+</ul>
+<blockquote>
+<p>La seguridad depende de que sea computacionalmente imposible deducir la clave privada a partir de la clave pública.</p>
+<p>Nota: En algunos algoritmos, cualquiera de las dos llaves puede ser usada para cifrado y su correspondiente descifrado.</p>
+</blockquote>
+<h3 id="comparativa">Comparativa</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Simétrica</th>
+<th>Asimétrica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claves</td>
+<td>Una compartida</td>
+<td>Par público/privado</td>
+</tr>
+<tr>
+<td>Velocidad</td>
+<td>Muy rápida</td>
+<td>Bastante más lenta que la simétrica</td>
+</tr>
+<tr>
+<td>Tamaño de clave</td>
+<td>128-256 bits</td>
+<td>2048-4096 bits (RSA)</td>
+</tr>
+<tr>
+<td>Uso típico</td>
+<td>Cifrar datos</td>
+<td>Intercambio de claves, firmas</td>
+</tr>
+<tr>
+<td>Ejemplos</td>
+<td>AES, ChaCha20</td>
+<td>RSA, Diffie-Hellman, ElGamal</td>
+</tr>
+</tbody>
+</table>
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/Symmetric.png" alt="Simétrica" width="400">
+</div>
+
+<div align="center">
+  <img src="/crypto-cyber/modulo-1-criptografia/images/Asymmetric.png" alt="Asimétrica" width="400">
+</div>
+
+<p><strong>En la práctica no se elige uno u otro — se usan juntos.</strong> La criptografía asimétrica se usa para intercambiar de forma segura una clave simétrica, y esa clave simétrica cifra los datos reales. Es exactamente lo que hace TLS.  </p>
+<h3 id="funcionalidades">Funcionalidades</h3>
+<ul>
+<li><strong>Key Establishment</strong>: Hay algoritmos para establecer claves compartidas sobre un canal inseguro. Ej, Diffie-hellman key exchange (DHKE) o RSA key transport.</li>
+<li><strong>No repudio</strong>: El no repudio e la integridad de los mensajes se puede lograr con algoritmos de firmas digitales. Ej, RSA, DSA, ECDSA.</li>
+<li><strong>Identificación</strong>: Se pueden identificar entidades a través de protocolos <em>challenge-response</em> en conjunto con estos algoritmos.</li>
+<li><strong>Cifrado</strong>: Se pueden cifrar mensajes con algunos de esos algoritmos, como RSA y ElGamal.  </li>
+</ul>
+<p>Parece entonces que los algoritmos de cifrado asimétrico pueden suplir todas las necesidades de seguridad. Sin embargo, si bien los simétricos tienen el problema de la distribución de llaves, los asimétricos son extremadamente lentos (computacionalmente intensos) cuando se trata de cifrado de datos. Muchos cifrados por bloques o por flujos pueden cifrar entre 100 y 1000 veces más rápido que un cifrado asimétrico. Por lo tanto, los cifrados asimétricos <em>rara vez</em> se usan en la actualidad para cifrar datos.<br />
+Por lo tanto, juntando lo mejor de los dos mundos, los protocolos más prácticos son los protocolos híbridos, que combinan cifrados simétricos y asimétricos. Ejemplo de estos protocolos son SSL/TLS (para asegurar conexiones web) o IPSec.  </p>
+<h3 id="familias-de-algoritmos">Familias de algoritmos</h3>
+<ul>
+<li>Esquemas basados en Factorización de enteros: Familia RSA. (mediados de 1970)  </li>
+<li>Esquemas basados en el Problema del logaritmo discreto (mediados de 1970): Diffie–Hellman key exchange, Elgamal encryption o Digital Signature Algorithm (DSA).  </li>
+<li>Esquemas basados en Curvas Elípticas (ECC) (generalización del problema del logaritmo discreto, mediados de 1980): Elliptic Curve Diffie–Hellman key exchange (ECDH) y Elliptic Curve Digital Signature Algorithm (ECDSA).  </li>
+</ul>
+<h3 id="funcionamiento-basico">Funcionamiento básico</h3>
+<ol>
+<li>Cada usuario genera su par de llaves para cifrado y descifrado.  </li>
+<li>Cada usuario pone una de las dos llaves en un registro público o en un archivo visible: esa es su clave pública. La otra será su privada. </li>
+<li>Cada usuario mantiene una colección de llaves públicas obtenidas de los demás usuarios.  </li>
+</ol>
+<p>En la práctica:<br />
+- Para certificados digitales, una entidad certificadora emite los certificados y adentro ya están incluidas las llaves.
+- Para PGP, los servidores son centralizados.
+- Intercambio directo, como por ejemplo Whatsapp.
+- Directorios internos en las empresas (como Active Directory) donde tienen las llaves de todos los empleados para cifrar correos y archivos.</p>
+<p>Si Alice quiere mandarle un mensaje confidencial a Bob, agarra la clave pública de Bob, cifra el mensaje y lo envía. Cuando Bob recibe el mensaje, lo descifra con su clave privada. Nadie más puede descifrar el mensaje porque el único que tiene la clave privada es él.</p>
+<p>Dijimos que cualquier llave se puede usar para cifrar. Entonces, tenemos dos esquemas de implementación distintos:
+- Si se cifra con la clave pública del receptor → <strong>confidencialidad</strong>
+- Si se cifra con la clave privada del emisor → <strong>integridad y autenticidad</strong></p>
+<h3 id="las-condiciones-de-diffie-hellman">Las condiciones de Diffie-Hellman</h3>
+<p>Cuando plantearon los postulados, establecieron las dos condiciones que debían cumplir los algoritmos:
+- Debe ser <strong>computacionalmente fácil</strong> para el receptor generar un par de llaves pública/privada.<br />
+- Debe ser <strong>computacionalmente fácil</strong> para el emisor, conociendo la pública y el mensaje a cifrar, generar el texto cifrado:<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>C = E(Pub, M)
+</code></pre></div>
+- Debe ser <strong>computacionamente fácil</strong> para el receptor descifrar el texto recibido con su clave privada.<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>M = D(Pr, C)
+</code></pre></div>
+- Debe ser <strong>computacionalmente inviable o imposible</strong> para un atacante, sabiendo la pública, determinar la llave privada correspondiente.<br />
+- Debe ser <strong>computacionalmente inviable o imposible</strong> para un atacante, sabiendo la pública y el texto cifrado, recuperar el mensaje original.  </p>
+<p>Estos postulados salen de la necesidad de usar una <strong>Función unidireccional</strong>: una función que mapea un dominio dentro de un rango de tal manera que cada valor de su función tiene un único inverso, con la condición de que calcular la función es fácil, mientras que el cálculo de su inverso es <em>inviable</em>.</p>
+<div style="background:#f5f5f5b3; padding:10px; border-radius:5px; font-family:monospace">
+  Y = f(X) → Fácil 
+  X = f<sup>-1</sup>(Y) → Inviable
+</div>
+
+<ul>
+<li><em>Fácil</em>: un problema que se puede resolver en tiempo polinomial.  (Ej, si tengo que computar <em>n</em> bits, el tiempo de cómputo de la función es proporcional a n<sup>a</sup>, donde <em>a</em> es constante. Problemas del tipo <em>P</em>)</li>
+<li><em>Inviable</em>: el esfuerzo para resolverlo crece más rápido que un tiempo polinómico. (Ej, si tengo que computar <em>n</em> bits y el tiempo de cómputo es 2<sup>n</sup>, el problema es considerado inviable o imposible)  </li>
+</ul>
+<p>Para los algoritmos, es difícil determinar si tienen estas particularidades. La mayoría de los análisis se centran en el peor caso o en el promedio. Pero en criptografía necesitamos que el algoritmo sea inviable para <strong>TODOS</strong> los inputs virtualmente posibles, no para el peor o el promedio de los casos.  </p>
+<h3 id="ataques">Ataques</h3>
+<h4 id="fuerza-bruta">Fuerza bruta</h4>
+<ul>
+<li>Igual que los simétricos.  </li>
+<li>La forma de evitarlo es la misma: <strong>usar claves más largas</strong>.  </li>
+<li>Punto a tener en cuenta: los algoritmos de clave pública dependen de funciones mateméticas específicas. La complejidad de calcular el inverso de esas funciones no escala de manera lineal con el número de bits de la llave, pero sí crece rápidamente a medida que la llave es más larga.  </li>
+</ul>
+<blockquote>
+<p>La key tiene que ser lo suficientemente grande para que un ataque de fuerz bruta sea impracticable pero lo suficientemente pequeña para que cifrar y descifrar sea práctico.  </p>
+</blockquote>
+<p>En la práctica, el tamaño de las claves propuestas hace de la fuerza bruta un ataque impracticable, pero como resultado obtenemos un proceso de cifrado y descifrado demasiado lento para uso general. Por eso, el cifrado de clave pública se usa para manejo de llaves y firmas digitales.  </p>
+<h4 id="computo-de-las-keys">Cómputo de las keys</h4>
+<p>No está matemáticamente probado que <strong>NO</strong> se pueda encontrar la privada teniendo la pública para un algoritmo particular. Incluso, se sospecha que todos los algoritmos son susceptibles. El problema que parece irresoluble desde una perspectiva, puede encontrar su solución desde otra. <em>Tienen fecha de vencimiento.</em>  </p>
+<h4 id="ataque-del-mensaje-probable">Ataque del mensaje probable</h4>
+<p>Suponemos que el mensaje que se quiere enviar es una clave DES de 56 bits.
+Un atacante puede cifrar <em>todas las claves de 56 bits posibles</em> usando la clave pública y así descubrir cuál es la llave cifrada que coincide con sus 56 bits cifrados.  </p>
+<p>Esto se resuelve metiendo bits aleatorios a los mensajes (ej, padding).  </p>
+<hr />
+<h2 id="fundamentos-matematicos">Fundamentos matemáticos</h2>
+<h3 id="grupos-ciclicos-y-raices-primitivas">Grupos cíclicos y raíces primitivas</h3>
+<p>Un <strong>grupo cíclico</strong> es un conjunto de elementos con una operación que cumple ciertas propiedades (clausura, asociatividad, elemento neutro, inverso) y que puede ser generado por un único elemento llamado <strong>generador</strong> o <strong>raíz primitiva</strong>.  </p>
+<p>La <strong>raíz primitiva</strong> (o <strong>generador</strong>) de un número primo <em>p</em> es un número tal que sus potencias (mod p) generan todos los enteros de <em>1 a p-1</em>.  </p>
+<p>Si <em>a</em> es una raíz primitiva de <em>p</em>, entonces los números a mod p, a<sup>2</sup> mod p, a<sup>3</sup> mod p,..., a<sup>p-1</sup> mod p son distintos y consisten en enteros desde 1 a p-1 (no se repiten).  </p>
+<p>Son todos primos relativos de <em>p</em>.  </p>
+<p>Ej, módulo 7 → p = 7 y Z<sub>7</sub>={1, 2, 3, 4, 5, 6}. </p>
+<p>Probamos entonces con <em>a = 2</em>:<br />
+- 2<sup>1</sup> ≡ 2 mod 7
+- 2<sup>2</sup> ≡ 4 mod 7 → ×
+- 2<sup>3</sup> ≡ 1 mod 7
+- 2<sup>4</sup> ≡ 4 mod 7 → ×</p>
+<p>Como se repiten, el 2 NO es una raíz primitiva.  </p>
+<p>Probamos con <em>a = 3</em>:<br />
+- 3<sup>1</sup> ≡ 3 mod 7
+- 3<sup>2</sup> ≡ 2 mod 7
+- 3<sup>3</sup> ≡ 6 mod 7
+- 3<sup>4</sup> ≡ 4 mod 7
+- 3<sup>5</sup> ≡ 5 mod 7
+- 3<sup>6</sup> ≡ 1 mod 7</p>
+<p>Con <em>a = 3</em> se generaron todos los números. Por lo tanto, <em>a = 3</em> es una raíz primitiva de <em>p = 7</em>.</p>
+<blockquote>
+<p>Nota: no necesariamente hay 1 sola raíz primitiva. Puede haber otras.</p>
+</blockquote>
+<h3 id="el-problema-del-logaritmo-discreto-dlp">El problema del logaritmo discreto (DLP)</h3>
+<p>Para cualquier entero <em>b</em> y una raíz primitiva <em>a</em> de un primo <em>p</em>, podemos encontrar un exponente único <em>i</em> tal que:</p>
+<div style="background:#f5f5f5b3; padding:10px; border-radius:5px; font-family:monospace">
+b ≡ a<sup>i</sup> mod p donde 0 ≤ i ≤ p-1
+</div>
+
+<p>A ese exponente <em>i</em> nos referimos con <em>logaritmo discreto de b en base a mod p</em>.</p>
+<p>Entonces,<br />
+- <em>p</em> es un primo.<br />
+- <em>a</em> es una raíz primitiva.<br />
+- <em>b</em> es un número entre {1, ..., p-1}.  </p>
+<p>Dicho de otra manera,  </p>
+<div style="background:#f5f5f5b3; padding:10px; border-radius:5px; font-family:monospace">
+i ≡ log<sub>a</sub> b mod p
+</div>
+
+<p>Ej, Sabiendo que <em>a = 3</em> es una raíz primitiva módulo 7, quiero calcular <em>b = 4</em>.
+- 3<sup>1</sup> ≡ 3 mod 7
+- 3<sup>2</sup> ≡ 2 mod 7
+- 3<sup>3</sup> ≡ 6 mod 7
+- 3<sup>4</sup> ≡ 4 mod 7 → Lo encontramos!!</p>
+<p>→ log<sub>3</sub> 4 ≡ 4 mod 7, porque el exponente que lo produce es <em>i = 4</em>.  </p>
+<blockquote>
+<p>Esto es costosísimo de resolver!! Hallar el exponente dado el módulo, la raíz y el resultado, la mejor solución es probar la mayor cantidad de números.  </p>
+</blockquote>
+<p>Resumen:<br />
+<strong>Exponenciar es fácil.</strong> Dado <em>i</em>, calcular <em>a<sup>i</sup> mod p</em> toma tiempo polinomial (exponenciación rápida).</p>
+<p><strong>El logaritmo discreto es difícil.</strong> Dado <em>b</em>, encontrar <em>i</em> requiere — con los mejores algoritmos conocidos — tiempo sub-exponencial pero computacionalmente inviable para valores grandes de <em>p</em>.</p>
+<p>Para <em>p</em> de 2048 bits, ningún algoritmo clásico conocido puede resolver el <em>problema del logaritmo discreto</em> en tiempo razonable. Esta asimetría computacional es la base de seguridad de Diffie-Hellman y ElGamal.</p>
+<hr />
+<h2 id="diffie-hellman-intercambio-de-claves">Diffie-Hellman — Intercambio de claves</h2>
+<p>Propuesto por Whitfield Diffie y Martin Hellman en 1976. Es el primer protocolo de intercambio de claves públicamente conocido — y resolvió el problema de distribución de claves que había bloqueado a la criptografía simétrica durante siglos.</p>
+<h3 id="idea-central">Idea central</h3>
+<p>Dos personas pueden establecer un secreto compartido a través de un canal completamente público, sin haberse comunicado antes de forma privada.</p>
+<h3 id="protocolo">Protocolo</h3>
+<p><strong>Parámetros públicos</strong> (conocidos por todos, acordados entre Alice y Bob):
+- <code>p</code>: número primo grande aleatorio<br />
+- <code>a</code>: raíz primitiva de <em>p</em> o generador del grupo Z<sup>*</sup><sub>p</sub></p>
+<p><strong>Protocolo:</strong></p>
+<p>Alice:<br />
+- Elige X<sub>a</sub> (secreto, número aleatorio) tal que 2 &lt; X<sub>a</sub> &lt; p-2.<br />
+- Calcula A = a<sup>X<sub>a</sub></sup>
+- Comparte A con Bob: ──── A ────&gt;  </p>
+<p>Bob:<br />
+- Elige X<sub>b</sub> (secreto) tal que 2 &lt; X<sub>b</sub> &lt; p-2.<br />
+- Calcula B = a<sup>X<sub>b</sub></sup> mod p 
+- Comparte B con Alice: ──── B ────&gt;  </p>
+<p>Luego de recibir <em>p y a</em> (ambos públicos), y <em>A y B</em> respectivamente,<br />
+Alice calcula Key_compartida = B<sup>X<sub>a</sub></sup> mod p<br />
+Bob calcula Key_compartida =  A<sup>X<sub>b</sub></sup> mod p  </p>
+<p>Ambos llegan al mismo secreto compartido:<br />
+key_compartida = B<sup>X<sub>a</sub></sup> = (a<sup>X<sub>b</sub></sup>)<sup>X<sub>a</sub></sup> = a<sup>(X<sub>a</sub>* X<sub>b</sub>)</sup> = (a<sup>X<sub>a</sub></sup>)<sup>X<sub>b</sub></sup> = A<sup>X<sub>b</sub></sup> mod p</p>
+<p><strong>Lo que ve el atacante:</strong> a, p, A, B.  </p>
+<p>Para obtener el secreto necesitaría X<sub>a</sub> o X<sub>b</sub>, lo que requiere resolver el problema del logaritmo discreto.</p>
+<h3 id="ejemplo">Ejemplo</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Parámetros públicos: p = 23, a = 5
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Alice elige X = 6:    A = 5⁶ mod 23 = 8
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Bob   elige X = 15:   B = 5¹⁵ mod 23 = 19
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Alice calcula: key = 19⁶ mod 23 = 2
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Bob   calcula: key = 8¹⁵ mod 23 = 2  ✓
+</code></pre></div>
+<p>En general, ese valor secreto compartido es usado para implementar un cifrado simétrico.</p>
+<h3 id="seguridad-y-limitaciones">Seguridad y limitaciones</h3>
+<p>DH resuelve el problema de distribución de claves pero <strong>no autentica</strong> a las partes. Un atacante que controla el canal puede hacer un ataque <strong>man-in-the-middle (MITM)</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Alice  ──A──&gt;  Oscar  ──A&#39;──&gt;  Bob
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Alice  &lt;──B&#39;── Oscar  &lt;──B───  Bob
+</code></pre></div>
+<p>Oscar establece una sesión DH separada con cada uno. Alice y Bob creen haber establecido un secreto compartido, pero en realidad cada uno comparte un secreto distinto con Oscar.</p>
+<p><strong>Solución:</strong> combinar DH con autenticación (ej, certificados digitales en TLS). Sin autenticación, DH es vulnerable a MITM.</p>
+<h3 id="anexo">Anexo</h3>
+<h4 id="generador-de-numeros-aleatorios">Generador de números aleatorios</h4>
+<p>Cómo se generan los números aleatorios primos (<em>p</em> público)?<br />
+1. Con CSPRNG. Nos da un número aleatorio de x cantidad de bits (ej, 1024)<br />
+2. Se testea si es primo. Si falla, se agarra el siguiente y se repite el proceso (el proceso de testeo se escapa al scope del tema).  </p>
+<p>Y los X<sub>a</sub> y X<sub>b</sub> de Alice y Bob? Con TRNG.  </p>
+<h4 id="la-exclusion-de-1-y-p-1">La exclusión de 1 y p-1</h4>
+<p>Tanto X<sub>a</sub> como X<sub>b</sub> deben estar dentro del conjunto {2, ..., p-2}.</p>
+<ol>
+<li>Se excluye el 1, porque si X<sub>a</sub> = 1 → A = a<sup>1</sup> mod p = a. El atacante ve A y a públicamente y compara A = a, deduciendo inmediatamente que la clave privada es 1.</li>
+<li>Se excluye el p-1, porque si X<sub>a</sub> = p-1, a<sup>(p-1)</sup> = 1 mod p <strong>siempre</strong> (por el pequeño Teorema de Fermat). Pero además, p-1 es el extremo del grupo, un valor que se puede deducir. Entonces, cuando se computa A y el atacante ve que A = 1, entonces deduce inmediatamente que X<sub>a</sub> = p-1 (clave privada es p-1 porque su pública es 1) o X<sub>a</sub> = 0 (porque también a<sup>0</sup> = 1).  </li>
+</ol>
+<hr />
+<h2 id="elgamal-cifrado-asimetrico">ElGamal — Cifrado asimétrico</h2>
+<p>ElGamal (1984) es un sistema de cifrado asimétrico construido sobre el mismo fundamento matemático que Diffie-Hellman: la dificultad del logaritmo discreto.</p>
+<h3 id="generacion-de-claves">Generación de claves</h3>
+<p>Parámetros públicos:<br />
+- <code>p</code> (primo grande)
+- <code>a</code> (raíz primitiva o generador)</p>
+<p>Bob genera su par de claves:<br />
+  Clave privada:  X<sub>b</sub>  (número aleatorio, X<sub>b</sub> &lt; p)<br />
+  Clave pública:  B = a<sup>X<sub>b</sub></sup> mod p  </p>
+<h3 id="cifrado-alice-bob">Cifrado (Alice → Bob)</h3>
+<p>Alice quiere enviar el mensaje M a Bob.<br />
+Conoce la clave pública de Bob: B = a<sup>X<sub>b</sub></sup> mod p  </p>
+<ol>
+<li>Representa el mensaje M como un entero dentro del rango 0 ≤ M ≤ p-1</li>
+<li>Elige un número aleatorio efímero <em>k</em> (secreto, uso único)</li>
+<li>Calcula: K<sub>E</sub> = B<sup>k</sup> mod p   (K<sub>E</sub> es la clave efímera compartida)</li>
+<li>Envía el par: (a<sup>k</sup> mod p,  M * K<sub>E</sub> mod p) (lo llamaremos el par (C1, C2))  </li>
+</ol>
+<h3 id="descifrado-bob">Descifrado (Bob)</h3>
+<p>Bob recibe: (C1, C2) = (a<sup>k</sup> mod p,  M * K<sub>E</sub> mod p)  </p>
+<ol>
+<li>Calcula: K<sub>E</sub> = C1<sup>X<sub>b</sub></sup> mod p = (a<sup>k</sup> mod p)<sup>X<sub>b</sub></sup> = a<sup>(k * X<sub>b</sub>)</sup> = B<sup>k</sup>  ✓</li>
+<li>Recupera M: M = C2 * K<sub>E</sub><sup>-1</sup> mod p</li>
+</ol>
+<p>La seguridad depende de que el atacante no pueda calcular K<sub>E</sub> = B<sup>k</sup> sin conocer X<sub>b</sub> (clave privada de Bob) ni k (número efímero de Alice).  </p>
+<h3 id="ejemplo_1">Ejemplo</h3>
+<p>Usamos p = 19. Raíces primitivas = {2, 3, 10, 13, 14, 15}. Elegimos <em>a = 10</em>  </p>
+<p>Alice:<br />
+1. Elige su privada X<sub>a</sub> = 5<br />
+2. Calcula su pública A = a<sup>X<sub>a</sub></sup> mod p = 10<sup>5</sup> mod 19 = 3 </p>
+<p>Bob: Quiere transmitir a Alice el mensaje representado como <em>M = 17</em><br />
+1. Elige el secreto k = 6<br />
+2. Calcula la clave efímera K<sub>E</sub> = A<sup>k</sup> mod p = 3<sup>6</sup> mod 19 = 729 mod 19 = 7 
+3. Entonces, arma el par (C1, C2) como<br />
+    C1 = a<sup>k</sup> mod p = 10<sup>6</sup> mod 19 = 11<br />
+    C2 = M * K<sub>E</sub> mod p = 17 * 7 mod 19 = 119 mod 19 = 5<br />
+4. Envía el par (11, 5)</p>
+<p>Para descifrar, Alice:<br />
+1. Calcula K<sub>E</sub> = C1<sup>X<sub>a</sub></sup> mod p = 11<sup>5</sup> mod 19 = 161051 mod 19 = 7 
+2. Entonces, K<sub>E</sub><sup>-1</sup> = 7<sup>-1</sup> mod 19 = 11 
+3. Finalmente, M = C2 * K<sub>E</sub><sup>-1</sup> mod p = 5 * 11 mod 19 = 55 mod 19 = 17 ✓ Recupera así el mensaje.  </p>
+<h3 id="propiedades">Propiedades</h3>
+<p><strong>Cifrado probabilístico:</strong> el número k es distinto en cada cifrado. El mismo mensaje M cifrado dos veces produce ciphertexts distintos — propiedad importante.</p>
+<p><strong>Expansión del mensaje:</strong> el ciphertext es el doble de largo que el plaintext (se envían dos valores: C1 y C2, y ambos son del grupo Z<sup>*</sup><sub>p</sub>, el grupo cíclico que genera la raíz primitiva p).</p>
+<p><strong>k debe ser único por mensaje:</strong> si Alice reutiliza k para dos mensajes distintos (calculando así la misma clave efímera), M₁ y M₂, un atacante que intercepta ambos puede recuperar M₁ y M₂.</p>
+<hr />
+<h2 id="comparativa-dh-vs-elgamal">Comparativa: DH vs ElGamal</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Diffie-Hellman</th>
+<th>ElGamal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Propósito</td>
+<td>Intercambio de claves</td>
+<td>Cifrado de mensajes</td>
+</tr>
+<tr>
+<td>Base matemática</td>
+<td>Problema del logaritmo discreto</td>
+<td>Problema del logaritmo discreto</td>
+</tr>
+<tr>
+<td>Autenticación</td>
+<td>No incluida</td>
+<td>No incluida</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Secreto compartido</td>
+<td>Ciphertext</td>
+</tr>
+<tr>
+<td>Uso típico</td>
+<td>TLS, SSH (intercambio de sesión)</td>
+<td>GPG, votación electrónica, firmas</td>
+</tr>
+<tr>
+<td>Problema conocido</td>
+<td>MITM sin autenticación</td>
+<td>k debe ser único y aleatorio</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conceptos-clave-de-esta-clase">Conceptos clave de esta clase</h2>
+<ul>
+<li><strong>Problema de distribución de claves:</strong> el talón de Aquiles de la criptografía simétrica. Diffie-Hellman lo resuelve.</li>
+<li><strong>Par de claves público/privado:</strong> la clave pública cifra (o verifica), la privada descifra (o firma). Deducir la privada desde la pública es computacionalmente inviable.</li>
+<li><strong>Simétrica vs asimétrica:</strong> asimétrica resuelve distribución de claves pero es muchísimo más lenta. En la práctica se aplican <strong>en conjunto</strong>.</li>
+<li><strong>Grupos cíclicos:</strong> estructura matemática base de DH y ElGamal.</li>
+<li><strong>Problema del Logaritmo discreto (también lo encuentran como DLP en algunos libros):</strong> exponenciar es fácil, calcular el logaritmo es difícil. Esa asimetría es la base de la seguridad de estos algoritmos.</li>
+<li><strong>Diffie-Hellman:</strong> dos partes establecen un secreto compartido sobre canal público sin contacto previo. No autentica a las partes — vulnerable a MITM.</li>
+<li><strong>ElGamal:</strong> cifrado asimétrico basado en el problema del logaritmo discreto. Probabilístico: mismo mensaje → ciphertexts distintos. El número efímero <em>k</em> no debe repetirse.</li>
+</ul>
+<hr />
+<h2 id="para-la-proxima-clase">Para la próxima clase</h2>
+<p>Continuamos con <strong>criptografía asimétrica</strong>: RSA — factorización de números grandes como base de seguridad — y su comparativa con DH/ElGamal.</p>
+<hr />
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li>Paar, C. &amp; Pelzl, J. — Understanding Cryptography</li>
+<li>Stallings, W. — Cryptography and Network Security</li>
+</ul>
+<h2 id="papers-originales">Papers originales</h2>
+<ul>
+<li>Diffie, W. &amp; Hellman, M. — <em>New Directions in Cryptography</em> (1976)</li>
+<li>ElGamal, T. — <em>A Public Key Cryptosystem and a Signature Scheme Based on Discrete Logarithms</em> (1985)</li>
+</ul>
+<hr />
 
 
 
