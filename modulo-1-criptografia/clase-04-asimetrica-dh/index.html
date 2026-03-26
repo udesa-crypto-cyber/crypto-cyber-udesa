@@ -1868,14 +1868,14 @@
 </blockquote>
 <hr />
 <h2 id="criptografia-simetrica-vs-asimetrica">Criptografía simétrica vs asimétrica</h2>
-<p>Hasta ahora todos los algoritmos que vimos — Caesar, AES, ChaCha20 — son <strong>simétricos</strong>: emisor y receptor usan la misma clave para cifrar y descrifrar. Pero hay un problema problema fundamental que no resolvimos todavía: <strong>la distribución de esa clave</strong>.</p>
-<p>La creación del concepto de <strong>clave pública</strong> fue la verdadera revolución de la criptografía. Después de muchos años trabajando con algoritmos que podían calcularse manualmente, el pico máximos de los algoritmos simétricos fue la creación del rotor electromecánico (como el de la máquina Enigma) que permitió la automatización de algunos cifrados, hacer cambios dinámicamente, y habilitó la practicidad y la velocidad antes que todo.<br />
+<p>Hasta ahora todos los algoritmos que vimos — Caesar, AES, ChaCha20 — son <strong>simétricos</strong>: emisor y receptor usan la misma clave para cifrar y descifrar. Pero hay un problema fundamental que no resolvimos todavía: <strong>la distribución de esa clave</strong>.</p>
+<p>La creación del concepto de <strong>clave pública</strong> fue la verdadera revolución de la criptografía. Después de muchos años trabajando con algoritmos que podían calcularse manualmente, uno de los puntos más altos de la criptografía simétrica fue la creación del rotor electromecánico (como el de la máquina Enigma), que permitió automatizar algunos cifrados, hacer cambios dinámicamente y ganar practicidad y velocidad.<br />
 Pero el rotor y otros cifrados más complejos como DES, <em>no dejaban de ser sustituciones y permutaciones</em>.  </p>
-<p>En cambio, estos nuevos algoritmos de <em>clave pública</em> se basan en <strong>problemas matemáticos</strong>. Y en lugar de usar una sola key usan <strong>DOS separadas</strong>, lo que tuvo muchas consecuencias a nivel seguridad (<em>confidencialidad, no repudio</em>).  </p>
+<p>En cambio, estos nuevos algoritmos de <em>clave pública</em> se basan en <strong>problemas matemáticos</strong>. Y en lugar de usar una sola clave usan <strong>DOS separadas</strong>, lo que tuvo muchas consecuencias a nivel seguridad (<em>confidencialidad, autenticación, no repudio</em>).  </p>
 <h3 id="aclaraciones">Aclaraciones</h3>
 <ul>
-<li>El cifrado de clave pública <strong>no</strong> es más resistente al criptoanálisis que el cifrado simétrico: la seguridad <em>NO</em> depende del algoritmo que es público por el principio de Kerchkoff, sino de la longitud de la clave. No hay nada, al menos <em>inicialmente</em> que haga que los cifrados de clave pública sean <em>mejores</em> que los cifrados simétricos.  </li>
-<li>E cifrado asimétrico <strong>no</strong> reemplaza al simétrico ni lo vuelve obsoleto: al contrario, el costo computacional de los cifrados simétricos es muchísimo mayor. Está universalmente aceptado usar cifrados de clave pública sólo para intercambio de claves y firmas digitales.  </li>
+<li>El cifrado de clave pública <strong>no</strong> es intrínsecamente "más seguro" que el cifrado simétrico: la seguridad <em>NO</em> depende de mantener secreto el algoritmo, sino de la clave, de acuerdo con el principio de Kerckhoffs. En la práctica, ambos mundos se evalúan con criterios distintos y cumplen roles distintos.  </li>
+<li>El cifrado asimétrico <strong>no</strong> reemplaza al simétrico ni lo vuelve obsoleto: al contrario, el costo computacional de los cifrados asimétricos es muchísimo mayor. Está universalmente aceptado usar criptografía de clave pública sobre todo para intercambio de claves, firmas digitales y autenticación.  </li>
 <li>La distribución de claves <strong>no</strong> es trivial: los procedimientos no son ni más sencillos ni más eficientes que en los cifrados simétricos.   </li>
 </ul>
 <h3 id="los-problemas-distribucion-de-llaves-y-firmas">Los problemas: distribución de llaves y firmas</h3>
@@ -1896,7 +1896,7 @@ Entonces, tenemos dos opciones:
 </ul>
 <blockquote>
 <p>La seguridad depende de que sea computacionalmente imposible deducir la clave privada a partir de la clave pública.</p>
-<p>Nota: En algunos algoritmos, cualquiera de las dos llaves puede ser usada para cifrado y su correspondiente descifrado.</p>
+<p>Nota: en algunos algoritmos existe una relación matemática entre ambas claves, pero eso no significa que "firmar" sea simplemente "cifrar con la privada". Las firmas digitales se construyen y analizan como primitivas distintas del cifrado.</p>
 </blockquote>
 <h3 id="comparativa">Comparativa</h3>
 <table>
@@ -1946,8 +1946,8 @@ Entonces, tenemos dos opciones:
 <p><strong>En la práctica no se elige uno u otro — se usan juntos.</strong> La criptografía asimétrica se usa para intercambiar de forma segura una clave simétrica, y esa clave simétrica cifra los datos reales. Es exactamente lo que hace TLS.  </p>
 <h3 id="funcionalidades">Funcionalidades</h3>
 <ul>
-<li><strong>Key Establishment</strong>: Hay algoritmos para establecer claves compartidas sobre un canal inseguro. Ej, Diffie-hellman key exchange (DHKE) o RSA key transport.</li>
-<li><strong>No repudio</strong>: El no repudio e la integridad de los mensajes se puede lograr con algoritmos de firmas digitales. Ej, RSA, DSA, ECDSA.</li>
+<li><strong>Key Establishment</strong>: Hay algoritmos para establecer claves compartidas sobre un canal inseguro. Ej, Diffie-Hellman key exchange (DHKE) o RSA key transport.</li>
+<li><strong>No repudio</strong>: El no repudio y la integridad de los mensajes se pueden lograr con algoritmos de firmas digitales. Ej, RSA, DSA, ECDSA.</li>
 <li><strong>Identificación</strong>: Se pueden identificar entidades a través de protocolos <em>challenge-response</em> en conjunto con estos algoritmos.</li>
 <li><strong>Cifrado</strong>: Se pueden cifrar mensajes con algunos de esos algoritmos, como RSA y ElGamal.  </li>
 </ul>
@@ -1971,16 +1971,16 @@ Por lo tanto, juntando lo mejor de los dos mundos, los protocolos más práctico
 - Intercambio directo, como por ejemplo Whatsapp.
 - Directorios internos en las empresas (como Active Directory) donde tienen las llaves de todos los empleados para cifrar correos y archivos.</p>
 <p>Si Alice quiere mandarle un mensaje confidencial a Bob, agarra la clave pública de Bob, cifra el mensaje y lo envía. Cuando Bob recibe el mensaje, lo descifra con su clave privada. Nadie más puede descifrar el mensaje porque el único que tiene la clave privada es él.</p>
-<p>Dijimos que cualquier llave se puede usar para cifrar. Entonces, tenemos dos esquemas de implementación distintos:
+<p>Conceptualmente, conviene separar dos primitivas distintas:
 - Si se cifra con la clave pública del receptor → <strong>confidencialidad</strong>
-- Si se cifra con la clave privada del emisor → <strong>integridad y autenticidad</strong></p>
+- Si se firma con la clave privada del emisor y se verifica con su clave pública → <strong>integridad, autenticidad y eventualmente no repudio</strong></p>
 <h3 id="las-condiciones-de-diffie-hellman">Las condiciones de Diffie-Hellman</h3>
 <p>Cuando plantearon los postulados, establecieron las dos condiciones que debían cumplir los algoritmos:
 - Debe ser <strong>computacionalmente fácil</strong> para el receptor generar un par de llaves pública/privada.<br />
 - Debe ser <strong>computacionalmente fácil</strong> para el emisor, conociendo la pública y el mensaje a cifrar, generar el texto cifrado:<br />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>C = E(Pub, M)
 </code></pre></div>
-- Debe ser <strong>computacionamente fácil</strong> para el receptor descifrar el texto recibido con su clave privada.<br />
+- Debe ser <strong>computacionalmente fácil</strong> para el receptor descifrar el texto recibido con su clave privada.<br />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>M = D(Pr, C)
 </code></pre></div>
 - Debe ser <strong>computacionalmente inviable o imposible</strong> para un atacante, sabiendo la pública, determinar la llave privada correspondiente.<br />
@@ -2001,10 +2001,10 @@ Por lo tanto, juntando lo mejor de los dos mundos, los protocolos más práctico
 <ul>
 <li>Igual que los simétricos.  </li>
 <li>La forma de evitarlo es la misma: <strong>usar claves más largas</strong>.  </li>
-<li>Punto a tener en cuenta: los algoritmos de clave pública dependen de funciones mateméticas específicas. La complejidad de calcular el inverso de esas funciones no escala de manera lineal con el número de bits de la llave, pero sí crece rápidamente a medida que la llave es más larga.  </li>
+<li>Punto a tener en cuenta: los algoritmos de clave pública dependen de funciones matemáticas específicas. La complejidad de calcular el inverso de esas funciones no escala de manera lineal con el número de bits de la llave, pero sí crece rápidamente a medida que la llave es más larga.  </li>
 </ul>
 <blockquote>
-<p>La key tiene que ser lo suficientemente grande para que un ataque de fuerz bruta sea impracticable pero lo suficientemente pequeña para que cifrar y descifrar sea práctico.  </p>
+<p>La clave tiene que ser lo suficientemente grande para que un ataque de fuerza bruta sea impracticable, pero no tanto como para volver impráctico el cálculo legítimo.  </p>
 </blockquote>
 <p>En la práctica, el tamaño de las claves propuestas hace de la fuerza bruta un ataque impracticable, pero como resultado obtenemos un proceso de cifrado y descifrado demasiado lento para uso general. Por eso, el cifrado de clave pública se usa para manejo de llaves y firmas digitales.  </p>
 <h4 id="computo-de-las-keys">Cómputo de las keys</h4>
@@ -2079,7 +2079,7 @@ i ≡ log<sub>a</sub> b mod p
 <p><strong>Protocolo:</strong></p>
 <p>Alice:<br />
 - Elige X<sub>a</sub> (secreto, número aleatorio) tal que 2 &lt; X<sub>a</sub> &lt; p-2.<br />
-- Calcula A = a<sup>X<sub>a</sub></sup>
+- Calcula A = a<sup>X<sub>a</sub></sup> mod p
 - Comparte A con Bob: ──── A ────&gt;  </p>
 <p>Bob:<br />
 - Elige X<sub>b</sub> (secreto) tal que 2 &lt; X<sub>b</sub> &lt; p-2.<br />
@@ -2111,10 +2111,10 @@ key_compartida = B<sup>X<sub>a</sub></sup> = (a<sup>X<sub>b</sub></sup>)<sup>X<s
 <p><strong>Solución:</strong> combinar DH con autenticación (ej, certificados digitales en TLS). Sin autenticación, DH es vulnerable a MITM.</p>
 <h3 id="anexo">Anexo</h3>
 <h4 id="generador-de-numeros-aleatorios">Generador de números aleatorios</h4>
-<p>Cómo se generan los números aleatorios primos (<em>p</em> público)?<br />
-1. Con CSPRNG. Nos da un número aleatorio de x cantidad de bits (ej, 1024)<br />
-2. Se testea si es primo. Si falla, se agarra el siguiente y se repite el proceso (el proceso de testeo se escapa al scope del tema).  </p>
-<p>Y los X<sub>a</sub> y X<sub>b</sub> de Alice y Bob? Con TRNG.  </p>
+<p>¿Cómo se generan los números primos aleatorios usados como parámetro público <em>p</em>?<br />
+1. Con un CSPRNG. Nos da un número aleatorio de cierta cantidad de bits.<br />
+2. Se testea si es primo. Si falla, se genera otro candidato y se repite el proceso.  </p>
+<p>¿Y los X<sub>a</sub> y X<sub>b</sub> de Alice y Bob? En la práctica también se generan con un CSPRNG correctamente inicializado.  </p>
 <h4 id="la-exclusion-de-1-y-p-1">La exclusión de 1 y p-1</h4>
 <p>Tanto X<sub>a</sub> como X<sub>b</sub> deben estar dentro del conjunto {2, ..., p-2}.</p>
 <ol>
@@ -2165,8 +2165,8 @@ Conoce la clave pública de Bob: B = a<sup>X<sub>b</sub></sup> mod p  </p>
 3. Finalmente, M = C2 * K<sub>E</sub><sup>-1</sup> mod p = 5 * 11 mod 19 = 55 mod 19 = 17 ✓ Recupera así el mensaje.  </p>
 <h3 id="propiedades">Propiedades</h3>
 <p><strong>Cifrado probabilístico:</strong> el número k es distinto en cada cifrado. El mismo mensaje M cifrado dos veces produce ciphertexts distintos — propiedad importante.</p>
-<p><strong>Expansión del mensaje:</strong> el ciphertext es el doble de largo que el plaintext (se envían dos valores: C1 y C2, y ambos son del grupo Z<sup>*</sup><sub>p</sub>, el grupo cíclico que genera la raíz primitiva p).</p>
-<p><strong>k debe ser único por mensaje:</strong> si Alice reutiliza k para dos mensajes distintos (calculando así la misma clave efímera), M₁ y M₂, un atacante que intercepta ambos puede recuperar M₁ y M₂.</p>
+<p><strong>Expansión del mensaje:</strong> el ciphertext es más largo que el plaintext, porque se envían dos valores: C1 y C2.</p>
+<p><strong>k debe ser único por mensaje:</strong> si Alice reutiliza k para dos mensajes distintos, se filtra una relación entre ambos cifrados. Eso puede permitir ataques parciales o incluso recuperar mensajes si uno de ellos es conocido o predecible.</p>
 <hr />
 <h2 id="comparativa-dh-vs-elgamal">Comparativa: DH vs ElGamal</h2>
 <table>
@@ -2201,7 +2201,7 @@ Conoce la clave pública de Bob: B = a<sup>X<sub>b</sub></sup> mod p  </p>
 <tr>
 <td>Uso típico</td>
 <td>TLS, SSH (intercambio de sesión)</td>
-<td>GPG, votación electrónica, firmas</td>
+<td>Cifrado tipo ElGamal en sistemas académicos o especializados</td>
 </tr>
 <tr>
 <td>Problema conocido</td>
@@ -2214,7 +2214,7 @@ Conoce la clave pública de Bob: B = a<sup>X<sub>b</sub></sup> mod p  </p>
 <h2 id="conceptos-clave-de-esta-clase">Conceptos clave de esta clase</h2>
 <ul>
 <li><strong>Problema de distribución de claves:</strong> el talón de Aquiles de la criptografía simétrica. Diffie-Hellman lo resuelve.</li>
-<li><strong>Par de claves público/privado:</strong> la clave pública cifra (o verifica), la privada descifra (o firma). Deducir la privada desde la pública es computacionalmente inviable.</li>
+<li><strong>Par de claves público/privado:</strong> la clave pública puede usarse para cifrado o verificación, y la privada para descifrado o firma, según la primitiva. Deducir la privada desde la pública es computacionalmente inviable.</li>
 <li><strong>Simétrica vs asimétrica:</strong> asimétrica resuelve distribución de claves pero es muchísimo más lenta. En la práctica se aplican <strong>en conjunto</strong>.</li>
 <li><strong>Grupos cíclicos:</strong> estructura matemática base de DH y ElGamal.</li>
 <li><strong>Problema del Logaritmo discreto (también lo encuentran como DLP en algunos libros):</strong> exponenciar es fácil, calcular el logaritmo es difícil. Esa asimetría es la base de la seguridad de estos algoritmos.</li>
